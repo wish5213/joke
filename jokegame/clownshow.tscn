@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://c51rxw4mqmjc"]
+
+[ext_resource type="Script" uid="uid://b2835st2hat6h" path="res://jokegame/clownshow.gd" id="1_856k3"]
+[ext_resource type="PackedScene" uid="uid://cqe3b2c62qt50" path="res://jokegame/step.tscn" id="2_cecam"]
+
+[node name="clownshow" type="Control" unique_id=1904922396]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_mode = 1
+mouse_force_pass_scroll_events = false
+script = ExtResource("1_856k3")
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=1411117790]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 201.0
+offset_right = 62.0
+offset_bottom = 209.0
+mouse_filter = 0
+mouse_force_pass_scroll_events = false
+theme_override_constants/h_separation = 150
+theme_override_constants/v_separation = 150
+columns = 4
+
+[node name="step" parent="GridContainer" unique_id=32059960 instance=ExtResource("2_cecam")]
+layout_mode = 2
