@@ -8,38 +8,52 @@
 
 [node name="step" type="Button" unique_id=32059960]
 anchors_preset = -1
-anchor_right = 0.16800001
-anchor_bottom = 0.102000006
-offset_left = 2.0
-offset_right = 2.0399933
-offset_bottom = -0.5600128
+anchor_right = 0.127
+anchor_bottom = 0.101
+offset_right = -1.9200058
+offset_bottom = -0.27999878
 grow_horizontal = 2
 grow_vertical = 2
 focus_mode = 0
+flat = true
 script = ExtResource("1_ofoxc")
 
 [node name="joker" type="TextureRect" parent="." unique_id=1238761017]
 layout_mode = 1
-offset_right = 120.0
-offset_bottom = 129.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("1_3je8u")
+expand_mode = 1
 
 [node name="mine" type="TextureRect" parent="." unique_id=1954363836]
 layout_mode = 1
-offset_right = 120.0
-offset_bottom = 129.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("2_ofoxc")
+expand_mode = 1
 
 [node name="empty" type="TextureRect" parent="." unique_id=2114171050]
 layout_mode = 1
-offset_right = 120.0
-offset_bottom = 129.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("3_ds5n8")
+expand_mode = 1
 
 [node name="square" type="TextureRect" parent="." unique_id=857113123]
 layout_mode = 1
-anchors_preset = -1
+anchors_preset = 15
 anchor_right = 1.0
-anchor_bottom = 1.008
-offset_bottom = -0.024002075
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("4_pfppo")
+expand_mode = 1

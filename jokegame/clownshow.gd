@@ -17,18 +17,18 @@ func _star_game():
 		child.queue_free()
 		
 	for i in range(mine_count):
-		sq_list.append(1)
+		sq_list.append(step.SpName.MINE)
 		
 	for i in range(joker_count):
-		sq_list.append(2)
+		sq_list.append(step.SpName.JOKER)
 		
 	for i in range(total_count - mine_count - joker_count):
-		sq_list.append(0)
+		sq_list.append(step.SpName.EMPTY)
 	
 	sq_list.shuffle()
 	
 	for i in range(total_count):
-		var new_sq = step_scene.instantiate() as step
+		var new_sq = step_scene.instantiate()
 		mine_container.add_child(new_sq)
-		new_sq.rand_type = sq_list[i]
+		new_sq.sp_type = sq_list[i]
 		

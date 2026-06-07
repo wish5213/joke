@@ -2,7 +2,7 @@ extends Button
 class_name step
 
 #此控制按鈕畫面的類型
-enum StepType{
+enum SpName{
 	EMPTY,
 	MINE,
 	JOKER
@@ -13,12 +13,12 @@ enum StepType{
 @onready var sp_mine: TextureRect = $mine
 @onready var sp_joker: TextureRect = $joker
 
-var type: StepType = StepType.EMPTY
+#var type: StepType = StepType.EMPTY
 var ud_squera: bool = false
-var rand_type = 0 
+var sp_type = 0 
 
 #負責傳裡面的資料出去
-signal cell_clicked(cell_type: StepType)
+#signal cell_clicked(cell_type: StepType)
 
 #原本是用pressed，但因為他需要點擊再放開，造成卡頓感，改成down以後沒這問題
 func _ready() -> void:
@@ -50,17 +50,17 @@ func _on_pressed() -> void:
 			#定義每張卡的編號
 			sp_squera.visible = false
 		
-			match rand_type:
+			match sp_type:
 				0:
-					rand_type = StepType.EMPTY
+					#sp_type.EMPTY
 					sp_empty.visible = true
 		
 				1:
-					StepType.MINE
+					#sp_type.MINE
 					sp_mine.visible = true
 		
 				2:
-					StepType.JOKER
+					#sp_name.JOKER
 					sp_joker.visible = true
 	)
 	#動畫特效，回彈的部分
