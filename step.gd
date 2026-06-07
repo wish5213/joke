@@ -52,15 +52,15 @@ func _on_pressed() -> void:
 		
 			match sp_type:
 				0:
-					#sp_type.EMPTY
+					SpName.EMPTY
 					sp_empty.visible = true
 		
 				1:
-					#sp_type.MINE
+					SpName.MINE
 					sp_mine.visible = true
 		
 				2:
-					#sp_name.JOKER
+					SpName.JOKER
 					sp_joker.visible = true
 	)
 	#動畫特效，回彈的部分

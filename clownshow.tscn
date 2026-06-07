@@ -14,21 +14,27 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 focus_mode = 1
 mouse_force_pass_scroll_events = false
 script = ExtResource("1_856k3")
+preview_mode = true
 
 [node name="GridContainer" type="GridContainer" parent="." unique_id=1411117790]
-layout_mode = 0
-offset_left = 67.0
-offset_top = 271.0
-offset_right = 75.0
-offset_bottom = 279.0
-scale = Vector2(25, 25)
-theme_override_constants/h_separation = 4
-theme_override_constants/v_separation = 4
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -492.0
+offset_top = 276.0
+offset_right = -464.0
+offset_bottom = 324.0
+grow_horizontal = 2
+scale = Vector2(35, 35)
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 2
 columns = 3
 
 [node name="TextureButton" type="TextureButton" parent="." unique_id=1531798428]

@@ -1,6 +1,15 @@
 @tool
 extends Control
 
+@export var preview_mode: bool = false:
+	set(value):
+		preview_mode = value
+		if Engine.is_editor_hint():
+			if preview_mode == true:
+				_star_game() # 打勾時，生成預覽
+			else:
+				clean_game() # 取消打勾時，把畫面清空
+
 @export var step_scene: PackedScene = preload("res://step.tscn")
 @onready var mine_container: GridContainer = $GridContainer
 
@@ -19,6 +28,17 @@ func _ready() -> void:
 
 func _star_game():
 	clean_game()
+	
+	# 🛠️ 安全防護網：避免編輯器剛開時還沒抓到場景就報錯崩潰
+	if step_scene == null:
+		return
+	
+	# 🛠️ 核心二：區分「編輯器」與「真實遊戲」的邏輯
+	if Engine.is_editor_hint():
+		# 編輯器預覽：單純把格子生出來排版，不跑機率也不洗牌
+		for i in range(total_count -1):
+			var new_sq = step_scene.instantiate()
+			mine_container.add_child(new_sq)
 	
 	#小丑隨機邏輯
 	if joker_rand_flag == true:
@@ -51,7 +71,10 @@ func clean_game():
 	sq_list.clear()
 	joker_count = joker_default
 	for child in mine_container.get_children():
-		child.queue_free()
+		if Engine.is_editor_hint():
+			child.free()
+		else:
+			child.queue_free()
 
 #重新一局
 func _reset_game() -> void:
