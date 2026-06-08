@@ -8,10 +8,10 @@
 
 [node name="step" type="Button" unique_id=32059960]
 anchors_preset = -1
-anchor_right = 0.127
-anchor_bottom = 0.101
-offset_right = -1.9200058
-offset_bottom = -0.27999878
+anchor_right = 0.13800001
+anchor_bottom = 0.071
+offset_right = -0.040008545
+offset_bottom = -1.1399994
 grow_horizontal = 2
 grow_vertical = 2
 focus_mode = 0
@@ -23,6 +23,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 127.0
+offset_bottom = 132.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_bspvh")
@@ -30,9 +32,10 @@ expand_mode = 1
 
 [node name="mine" type="TextureRect" parent="." unique_id=1954363836]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = -1
+anchor_right = 1.8520001
+anchor_bottom = 1.8000001
+offset_right = 0.051971436
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_g822j")
@@ -43,6 +46,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 127.0
+offset_bottom = 132.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("4_bogwb")
@@ -53,6 +58,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 127.0
+offset_bottom = 132.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("5_8f8yk")
