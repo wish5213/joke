@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dskmp1sy8wupw"]
+
+[ext_resource type="Script" uid="uid://mdehsvkpp604" path="res://solt_teacher.gd" id="1_c3ve5"]
+
+[node name="SoltItem" type="Node2D" unique_id=120178423]
+script = ExtResource("1_c3ve5")
+
+[node name="mask" type="Control" parent="." unique_id=1490125078]
+clip_contents = true
+layout_mode = 3
+anchors_preset = 0
+offset_right = 597.0
+offset_bottom = 291.0
+
+[node name="ItemsContainer" type="Node2D" parent="mask" unique_id=113616841]
