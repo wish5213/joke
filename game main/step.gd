@@ -40,7 +40,7 @@ func hide_all() -> void:
 	sp_joker.visible = false
 
 func _on_pressed() -> void:
-	if ud_squera:
+	if ud_squera == true :
 		return
 	ud_squera = true
 	disabled = true
