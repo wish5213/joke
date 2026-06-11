@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cgltfxa7fv4t"]
 
-[ext_resource type="Texture2D" uid="uid://dai15445muno" path="res://Image/slot/explain.png" id="1_5wfp6"]
+[ext_resource type="Texture2D" uid="uid://xogn8ky3tfoc" path="res://Image/slot/explain.png" id="1_5wfp6"]
 [ext_resource type="Texture2D" uid="uid://symhg1xiwx17" path="res://Image/slot/all.png" id="1_7rri7"]
 [ext_resource type="Script" uid="uid://go4o15d66tfc" path="res://turntable.gd" id="1_ltvq2"]
 [ext_resource type="Texture2D" uid="uid://45ahntfdo30e" path="res://Image/slot/frame.png" id="1_uw6ar"]
@@ -15,70 +15,72 @@
 
 [node name="Slot" type="Control" unique_id=1819201416]
 layout_mode = 3
-anchor_right = 0.97850806
-anchor_bottom = 0.2837607
-grow_horizontal = 2
-grow_vertical = 2
+anchor_right = 0.9777778
+anchor_bottom = 0.51965815
+offset_bottom = -0.00012207031
 metadata/_edit_use_anchors_ = true
 
 [node name="Control" type="Control" parent="." unique_id=669551143]
 anchors_preset = 0
-offset_top = 560.0
-offset_right = 1056.0
-offset_bottom = 1192.0
+anchor_top = 0.48026314
+anchor_right = 1.0
+anchor_bottom = 1.0
 metadata/_edit_group_ = true
+metadata/_edit_use_anchors_ = true
 
 [node name="explain" type="TextureRect" parent="Control" unique_id=1066967316]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
 texture = ExtResource("1_5wfp6")
 expand_mode = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="title" type="Label" parent="Control" unique_id=1611562437]
-layout_mode = 1
-offset_left = 80.0
-offset_top = 192.0
-offset_right = 864.0
-offset_bottom = 264.0
+layout_mode = 0
+anchor_left = 0.07575758
+anchor_top = 0.34177214
+anchor_right = 0.71117425
+anchor_bottom = 0.4556962
+offset_top = 1.5258789e-05
 theme_override_font_sizes/font_size = 52
 text = "Quái vật thiếu tình thương"
+metadata/_edit_use_anchors_ = true
 
 [node name="content" type="Label" parent="Control" unique_id=1875427923]
-layout_mode = 1
-offset_left = 128.0
-offset_top = 296.0
-offset_right = 960.0
-offset_bottom = 488.0
+layout_mode = 0
+anchor_left = 0.121212125
+anchor_top = 0.49367088
+anchor_right = 0.90909094
+anchor_bottom = 0.7927215
 theme_override_font_sizes/font_size = 32
 text = "Kể một câu chuyện xấu hổ. Nếu không ai đồng cảm thì nghĩa là chưa đủ \"thảm họa\" — bạn tự uống một ly. Nếu có người đồng cảm, cả hai cùng uống."
 autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
 
-[node name="turntable" type="Node2D" parent="." unique_id=2135380056]
-position = Vector2(144, 176)
+[node name="turntable" type="Control" parent="." unique_id=1992540923]
+layout_mode = 1
+anchor_left = 0.15151516
+anchor_top = 0.17105263
+anchor_right = 0.15151516
+anchor_bottom = 0.17105263
 script = ExtResource("1_ltvq2")
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
+metadata/_edit_use_anchors_ = true
 
 [node name="mask" type="Control" parent="turntable" unique_id=1836433045]
 clip_contents = true
-layout_mode = 3
 anchors_preset = 0
-offset_left = 16.0
-offset_top = 24.0
-offset_right = 613.0
-offset_bottom = 314.0
+offset_right = 597.0
+offset_bottom = 290.0
 scale = Vector2(1.2, 1.2)
 metadata/_edit_use_anchors_ = true
-metadata/_edit_lock_ = true
 
-[node name="reel" type="Node2D" parent="turntable/mask" unique_id=1486144929]
-metadata/_edit_lock_ = true
+[node name="reel" type="Control" parent="turntable/mask" unique_id=778487947]
+layout_mode = 1
 
 [node name="all" type="TextureRect" parent="turntable/mask/reel" unique_id=88926889]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -89,9 +91,9 @@ grow_vertical = 2
 texture = ExtResource("1_7rri7")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
-metadata/_edit_lock_ = true
 
 [node name="angel" type="TextureRect" parent="turntable/mask/reel" unique_id=1995540472]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -102,9 +104,9 @@ grow_vertical = 2
 texture = ExtResource("2_ltvq2")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
-metadata/_edit_lock_ = true
 
 [node name="myself" type="TextureRect" parent="turntable/mask/reel" unique_id=2068120335]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -115,9 +117,9 @@ grow_vertical = 2
 texture = ExtResource("3_5wfp6")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
-metadata/_edit_lock_ = true
 
 [node name="youdrink" type="TextureRect" parent="turntable/mask/reel" unique_id=1600941560]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -128,9 +130,9 @@ grow_vertical = 2
 texture = ExtResource("4_4srry")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
-metadata/_edit_lock_ = true
 
 [node name="secret" type="TextureRect" parent="turntable/mask/reel" unique_id=142373703]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -141,9 +143,14 @@ grow_vertical = 2
 texture = ExtResource("5_8ud0g")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
-metadata/_edit_lock_ = true
 
-[node name="frame" type="TextureRect" parent="." unique_id=1946374887]
+[node name="AspectRatioContainer" type="Control" parent="." unique_id=445485438]
+layout_mode = 1
+anchor_right = 1.0005097
+anchor_bottom = 0.55921054
+metadata/_edit_use_anchors_ = true
+
+[node name="frame" type="TextureRect" parent="AspectRatioContainer" unique_id=1946374887]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -151,32 +158,39 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_uw6ar")
-expand_mode = 1
 
-[node name="translate" type="TextureButton" parent="." unique_id=1032300653]
+[node name="stop&trans" type="Control" parent="." unique_id=1427187383]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.21196291
-anchor_top = 0.8674699
-anchor_right = 0.78520215
-anchor_bottom = 0.97590363
+anchor_left = 0.22727273
+anchor_top = 0.4868421
+anchor_right = 0.77272725
+anchor_bottom = 0.54605263
+offset_right = -96.0
+offset_bottom = -12.0
+scale = Vector2(1.2, 1.2)
+metadata/_edit_use_anchors_ = true
+metadata/_edit_group_ = true
+
+[node name="translate" type="TextureButton" parent="stop&trans" unique_id=1032300653]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture_normal = ExtResource("2_uw6ar")
 texture_pressed = ExtResource("3_baieg")
+ignore_texture_size = true
 stretch_mode = 0
-metadata/_edit_use_anchors_ = true
-metadata/_edit_lock_ = true
 
-[node name="stop" type="TextureButton" parent="." unique_id=1031642200]
+[node name="stop" type="TextureButton" parent="stop&trans" unique_id=1031642200]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.21196291
-anchor_top = 0.8674699
-anchor_right = 0.7852022
-anchor_bottom = 0.97590363
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture_normal = ExtResource("4_sgpot")
 texture_pressed = ExtResource("5_f3xdb")
+ignore_texture_size = true
 stretch_mode = 0
-metadata/_edit_use_anchors_ = true
-metadata/_edit_lock_ = true
