@@ -1,11 +1,14 @@
 extends Control
 
-#定義圖片
+#定義圖片跟按鈕切換
 @onready var turn_all: TextureRect = $mask/reel/all
 @onready var turn_angel: TextureRect = $mask/reel/angel
 @onready var turn_myself: TextureRect = $mask/reel/myself
 @onready var turn_youdrink: TextureRect = $mask/reel/youdrink
 @onready var turn_secret: TextureRect = $mask/reel/secret
+
+@onready var stop_trans_change = $"../stop_trans"
+
 
 #定義裝圖片的容器
 @onready var reel = $mask/reel
@@ -20,6 +23,8 @@ var is_reeling:bool = false
 var reel_tween : Tween
 var spin_tween : Tween
 
+signal prize_number
+
 @onready var TurnName:Dictionary ={
 	0 : turn_all,
 	1 : turn_angel,
@@ -29,9 +34,13 @@ var spin_tween : Tween
 	}
 
 func _ready() -> void:
+	pass
 	#_reel_photo(turn_list)
 	#start_spin()
-	pass
+	#self.prize_number.connect(_on_text_signal)
+	
+#func _on_text_signal(get_singal):
+	#print ("獎項是" ,get_singal)
 
 func _reel_photo(master_array : Array):
 	turn_list = master_array.duplicate()
@@ -53,7 +62,8 @@ func start_spin():
 		return
 	is_reeling = true
 	reel_tween = create_tween()
-	reel_tween.tween_property(reel,"position:y", reel.position.y + (photo_high * turn_list.size()), 15)
+	var total_reel_high = reel.position.y + (photo_high * turn_list.size())
+	reel_tween.tween_property(reel,"position:y",total_reel_high, 15)
 
 #輪盤停止規則
 func stop_spin():
@@ -91,3 +101,14 @@ func stop_spin():
 		stop_tween.set_trans(Tween.TRANS_QUAD)
 		stop_tween.set_ease(Tween.EASE_OUT)
 		stop_tween.tween_property(reel,"position:y" , tareget_y,0.2)
+		
+	await stop_tween.finished
+	stop_trans_change.change_button()
+	prize_number.emit(turn_list[prize_index])
+	
+#func _input(delta):
+	#if Input.is_action_pressed("ui_accept"):
+		#stop_spin()
+		
+		
+	

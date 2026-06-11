@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://c51rxw4mqmjc"]
 
-[ext_resource type="Script" uid="uid://b2835st2hat6h" path="res://game main/clownshow.gd" id="1_856k3"]
+[ext_resource type="Script" uid="uid://b2835st2hat6h" path="res://clownshow.gd" id="1_856k3"]
 [ext_resource type="Texture2D" uid="uid://j7xv5yu6ru3f" path="res://Image/game main/ChatGPT Image 2026年6月8日 下午09_00_57.png" id="2_5fid4"]
-[ext_resource type="PackedScene" uid="uid://cqe3b2c62qt50" path="res://game main/step.tscn" id="3_g5cit"]
+[ext_resource type="PackedScene" uid="uid://cqe3b2c62qt50" path="res://step.tscn" id="3_g5cit"]
 [ext_resource type="Texture2D" uid="uid://dj40ms7f78w8x" path="res://Image/game main/reset.png" id="4_7gqty"]
 [ext_resource type="Texture2D" uid="uid://dmy5iguecfjby" path="res://Image/game main/reset_put.png" id="5_3a8u1"]
 [ext_resource type="Texture2D" uid="uid://dtjlipyxb1q0g" path="res://Image/game main/setting.png" id="6_g3cau"]

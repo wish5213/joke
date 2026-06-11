@@ -1,6 +1,6 @@
 extends Control
 
-@export var step_scene: PackedScene = preload("res://game main/step.tscn")
+@export var step_scene: PackedScene = preload("res://slot.tscn")
 @onready var mine_container = $GridContainer.get_children()
 
 var mine_count: int = 1

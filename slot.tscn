@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://ct0o303ow7yxl" path="res://Image/slot/stop.png" id="4_sgpot"]
 [ext_resource type="Texture2D" uid="uid://4n68ro5fc6jp" path="res://Image/slot/secret.png" id="5_8ud0g"]
 [ext_resource type="Texture2D" uid="uid://bokiq0077a5c7" path="res://Image/slot/stop_put.png" id="5_f3xdb"]
+[ext_resource type="Script" uid="uid://dj0npg6g376ba" path="res://stop_trans.gd" id="9_4srry"]
 
 [node name="Slot" type="Control" unique_id=1819201416]
 layout_mode = 3
@@ -162,7 +163,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_uw6ar")
 
-[node name="stop&trans" type="Control" parent="." unique_id=1427187383]
+[node name="stop_trans" type="Control" parent="." unique_id=1427187383]
 layout_mode = 1
 anchor_left = 0.22727273
 anchor_top = 0.4868421
@@ -171,10 +172,11 @@ anchor_bottom = 0.54605263
 offset_right = -96.0
 offset_bottom = -12.0
 scale = Vector2(1.2, 1.2)
+script = ExtResource("9_4srry")
 metadata/_edit_use_anchors_ = true
 metadata/_edit_group_ = true
 
-[node name="translate" type="TextureButton" parent="stop&trans" unique_id=1032300653]
+[node name="translate" type="TextureButton" parent="stop_trans" unique_id=1032300653]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -186,7 +188,7 @@ texture_pressed = ExtResource("3_baieg")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="stop" type="TextureButton" parent="stop&trans" unique_id=1031642200]
+[node name="stop" type="TextureButton" parent="stop_trans" unique_id=1031642200]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
