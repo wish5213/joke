@@ -33,6 +33,8 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("1_5wfp6")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
@@ -78,6 +80,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="reel" type="Control" parent="turntable/mask" unique_id=778487947]
 layout_mode = 1
+anchors_preset = 0
 
 [node name="all" type="TextureRect" parent="turntable/mask/reel" unique_id=88926889]
 layout_mode = 1
