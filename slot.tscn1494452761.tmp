@@ -20,7 +20,7 @@ anchor_bottom = 0.51965815
 offset_bottom = -0.00012207031
 metadata/_edit_use_anchors_ = true
 
-[node name="text" type="Control" parent="." unique_id=669551143]
+[node name="Control" type="Control" parent="." unique_id=669551143]
 anchors_preset = 0
 anchor_top = 0.48026314
 anchor_right = 1.0
@@ -28,7 +28,7 @@ anchor_bottom = 1.0
 metadata/_edit_group_ = true
 metadata/_edit_use_anchors_ = true
 
-[node name="explain" type="TextureRect" parent="text" unique_id=1066967316]
+[node name="explain" type="TextureRect" parent="Control" unique_id=1066967316]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -39,7 +39,7 @@ texture = ExtResource("1_5wfp6")
 expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="title" type="Label" parent="text" unique_id=1611562437]
+[node name="title" type="Label" parent="Control" unique_id=1611562437]
 layout_mode = 0
 anchor_left = 0.07575758
 anchor_top = 0.34177214
@@ -50,7 +50,7 @@ theme_override_font_sizes/font_size = 52
 text = "Quái vật thiếu tình thương"
 metadata/_edit_use_anchors_ = true
 
-[node name="content" type="Label" parent="text" unique_id=1875427923]
+[node name="content" type="Label" parent="Control" unique_id=1875427923]
 layout_mode = 0
 anchor_left = 0.121212125
 anchor_top = 0.49367088

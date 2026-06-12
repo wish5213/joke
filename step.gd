@@ -17,9 +17,6 @@ enum SpName{
 var ud_squera: bool = false
 var sp_type = 0 
 
-#負責傳裡面的資料出去
-#signal cell_clicked(cell_type: StepType)
-
 #原本是用pressed，但因為他需要點擊再放開，造成卡頓感，改成down以後沒這問題
 func _ready() -> void:
 	button_down.connect(_on_pressed)
@@ -58,15 +55,15 @@ func _on_pressed() -> void:
 		
 			match sp_type:
 				0:
-					SpName.EMPTY
+					#SpName.EMPTY
 					sp_empty.visible = true
 		
 				1:
-					SpName.MINE
+					#SpName.MINE
 					sp_mine.visible = true
 		
 				2:
-					SpName.JOKER
+					#SpName.JOKER
 					sp_joker.visible = true
 	)
 	#動畫特效，回彈的部分

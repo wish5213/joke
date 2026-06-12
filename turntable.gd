@@ -7,7 +7,9 @@ extends Control
 @onready var turn_youdrink: TextureRect = $mask/reel/youdrink
 @onready var turn_secret: TextureRect = $mask/reel/secret
 
-@onready var stop_trans_change = $"../stop_trans"
+@onready var stop_button = $"../stop_trans/stop"
+@onready var trans_button = $"../stop_trans/translate"
+
 
 
 #定義裝圖片的容器
@@ -22,6 +24,7 @@ var turn_list:Array = [0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,
 var is_reeling:bool = false
 var reel_tween : Tween
 var spin_tween : Tween
+var button_type : String = "stop"
 
 signal prize_number
 
@@ -101,14 +104,18 @@ func stop_spin():
 		stop_tween.set_trans(Tween.TRANS_QUAD)
 		stop_tween.set_ease(Tween.EASE_OUT)
 		stop_tween.tween_property(reel,"position:y" , tareget_y,0.2)
-		
+	
 	await stop_tween.finished
-	stop_trans_change.change_button()
 	prize_number.emit(turn_list[prize_index])
-	
-#func _input(delta):
-	#if Input.is_action_pressed("ui_accept"):
-		#stop_spin()
+	stop_button.visible = false
+
+func _on_change_button() -> void:
+	match button_type:
+		"stop" : 
+			stop_spin()
+			stop_button.disabled = true
+			button_type = "trans"
 		
-		
-	
+		"trans":
+			print(1)
+			pass
