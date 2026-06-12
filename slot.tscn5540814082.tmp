@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cadug0tr4q288" path="res://Image/slot/translate.png" id="2_uw6ar"]
 [ext_resource type="Texture2D" uid="uid://cr8vaiy8w4oln" path="res://Image/slot/myself.png" id="3_5wfp6"]
 [ext_resource type="Texture2D" uid="uid://baufc51mlwco5" path="res://Image/slot/translate_put.png" id="3_baieg"]
-[ext_resource type="Script" uid="uid://cyf5bitdc32kp" path="res://language_btn.gd" id="3_k2k70"]
+[ext_resource type="Script" uid="uid://cyf5bitdc32kp" path="res://language.gd" id="3_k2k70"]
 [ext_resource type="Texture2D" uid="uid://cv6pe14v80hoy" path="res://Image/slot/youdrink.png" id="4_4srry"]
 [ext_resource type="Texture2D" uid="uid://cdyhug4kh0pkl" path="res://Image/language/tw.png" id="4_isr6q"]
 [ext_resource type="Texture2D" uid="uid://ct0o303ow7yxl" path="res://Image/slot/stop.png" id="4_sgpot"]
@@ -68,7 +68,7 @@ text = "給你逃過一劫，Pass一次"
 autowrap_mode = 3
 metadata/_edit_use_anchors_ = true
 
-[node name="language_btn" type="OptionButton" parent="text" unique_id=724129639]
+[node name="language" type="OptionButton" parent="text" unique_id=724129639]
 layout_mode = 0
 offset_left = 808.0
 offset_top = 152.0
@@ -76,25 +76,25 @@ offset_right = 920.0
 offset_bottom = 200.0
 script = ExtResource("3_k2k70")
 
-[node name="tw" type="TextureRect" parent="text/language_btn" unique_id=666265058]
+[node name="tw" type="TextureRect" parent="text/language" unique_id=666265058]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("4_isr6q")
 
-[node name="th" type="TextureRect" parent="text/language_btn" unique_id=1238865194]
+[node name="th" type="TextureRect" parent="text/language" unique_id=1238865194]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("5_isr6q")
 
-[node name="vn" type="TextureRect" parent="text/language_btn" unique_id=740715784]
+[node name="vn" type="TextureRect" parent="text/language" unique_id=740715784]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("6_swnr6")
 
-[node name="en" type="TextureRect" parent="text/language_btn" unique_id=220493043]
+[node name="en" type="TextureRect" parent="text/language" unique_id=220493043]
 layout_mode = 0
 offset_right = 114.0
 offset_bottom = 48.0

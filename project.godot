@@ -22,6 +22,10 @@ window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 window/handheld/orientation=1
 
+[internationalization]
+
+locale/translations=PackedStringArray("res://translate/turntable_language - 工作表1.zh_TW.translation", "res://translate/turntable_language - 工作表1.vi.translation", "res://translate/turntable_language - 工作表1.th.translation", "res://translate/turntable_language - 工作表1.en.translation")
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

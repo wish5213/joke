@@ -7,8 +7,11 @@ extends Control
 @onready var turn_youdrink: TextureRect = $mask/reel/youdrink
 @onready var turn_secret: TextureRect = $mask/reel/secret
 
+#定義按鈕位置
 @onready var stop_button = $"../stop_trans/stop"
 @onready var trans_button = $"../stop_trans/translate"
+
+@onready var lan_trans = $"../text"
 
 
 
@@ -21,12 +24,14 @@ var turn_list:Array = [0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,
 0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,
 2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,
 0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4]
-var is_reeling:bool = false
+var is_reeling : bool = false
 var reel_tween : Tween
 var spin_tween : Tween
 var button_type : String = "stop"
+var aaa = "zh_TW"
 
 signal prize_number
+#signal lan_new
 
 @onready var TurnName:Dictionary ={
 	0 : turn_all,
@@ -35,11 +40,11 @@ signal prize_number
 	3 : turn_youdrink,
 	4 : turn_secret,
 	}
-
+	
 func _ready() -> void:
 	pass
-	#_reel_photo(turn_list)
-	#start_spin()
+	_reel_photo(turn_list)
+	start_spin()
 	#self.prize_number.connect(_on_text_signal)
 	
 #func _on_text_signal(get_singal):
@@ -67,6 +72,12 @@ func start_spin():
 	reel_tween = create_tween()
 	var total_reel_high = reel.position.y + (photo_high * turn_list.size())
 	reel_tween.tween_property(reel,"position:y",total_reel_high, 15)
+	
+	#倒數10秒後自動停止
+	await get_tree().create_timer(10.0).timeout
+	if is_reeling == true:
+		stop_spin()
+
 
 #輪盤停止規則
 func stop_spin():
@@ -105,17 +116,16 @@ func stop_spin():
 		stop_tween.set_ease(Tween.EASE_OUT)
 		stop_tween.tween_property(reel,"position:y" , tareget_y,0.2)
 	
+	button_type = "trans"
 	await stop_tween.finished
 	prize_number.emit(turn_list[prize_index])
 	stop_button.visible = false
+	
 
 func _on_change_button() -> void:
 	match button_type:
 		"stop" : 
 			stop_spin()
-			stop_button.disabled = true
-			button_type = "trans"
 		
 		"trans":
-			print(1)
-			pass
+			lan_trans.tw_to_ano()

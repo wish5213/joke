@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://clwxa10vgb5mp"
+
+[deps]
+
+files=["res://translate/turntable_language - 工作表1.zh_TW.translation", "res://translate/turntable_language - 工作表1.en.translation", "res://translate/turntable_language - 工作表1.th.translation", "res://translate/turntable_language - 工作表1.vi.translation"]
+
+source_file="res://translate/turntable_language - 工作表1.csv"
+dest_files=["res://translate/turntable_language - 工作表1.zh_TW.translation", "res://translate/turntable_language - 工作表1.en.translation", "res://translate/turntable_language - 工作表1.th.translation", "res://translate/turntable_language - 工作表1.vi.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true
