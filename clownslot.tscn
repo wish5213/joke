@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dhtejerokh85j"]
+
+[ext_resource type="Script" uid="uid://c5qgqwy5gyxy4" path="res://clownslot.gd" id="1_vku4s"]
+[ext_resource type="PackedScene" uid="uid://cgltfxa7fv4t" path="res://slot.tscn" id="2_v3t0b"]
+
+[node name="clownslot" type="Control" unique_id=1184853509]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vku4s")
+
+[node name="back" parent="." unique_id=1819201416 instance=ExtResource("2_v3t0b")]
+layout_mode = 1
+anchor_left = 0.9851852
+anchor_top = 0.51965815
+anchor_right = 1.9631852
+anchor_bottom = 1.0396582
+rotation = 3.1415927
+metadata/_edit_lock_ = true
+
+[node name="front" parent="." unique_id=1288017798 instance=ExtResource("2_v3t0b")]
+layout_mode = 1
+anchor_left = 0.0074074073
+anchor_top = 0.47863248
+anchor_right = 0.9854074
+anchor_bottom = 0.9986325
+metadata/_edit_lock_ = true

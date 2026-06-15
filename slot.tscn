@@ -19,11 +19,12 @@
 [ext_resource type="Texture2D" uid="uid://cncckmhnlq1i5" path="res://Image/language/en.png" id="5_wo7b1"]
 [ext_resource type="Texture2D" uid="uid://d2qhjqodvwf7l" path="res://Image/language/vn.png" id="6_swnr6"]
 
-[node name="clownslot" type="Control" unique_id=1819201416]
+[node name="slot" type="Control" unique_id=1819201416]
 layout_mode = 3
-anchor_right = 0.9777778
-anchor_bottom = 0.51965815
-offset_bottom = -0.00012207031
+anchor_right = 0.97800004
+anchor_bottom = 0.52000004
+offset_right = -0.23999023
+offset_bottom = -0.8000488
 metadata/_edit_use_anchors_ = true
 
 [node name="text" type="Control" parent="." unique_id=669551143]

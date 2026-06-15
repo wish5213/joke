@@ -24,6 +24,7 @@ var turn_list:Array = [0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,
 0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,
 2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,
 0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4]
+var turn_main_rand : int = 0
 var is_reeling : bool = false
 var reel_tween : Tween
 var spin_tween : Tween
@@ -43,16 +44,18 @@ signal prize_number
 	
 func _ready() -> void:
 	pass
-	_reel_photo(turn_list)
+	_reel_photo()
 	start_spin()
 	#self.prize_number.connect(_on_text_signal)
 	
 #func _on_text_signal(get_singal):
 	#print ("獎項是" ,get_singal)
 
-func _reel_photo(master_array : Array):
-	turn_list = master_array.duplicate()
-	
+func _reel_photo():
+	#for i in turn_main_rand :
+		#var fist_items = turn_list.pop_front()
+		#turn_list.append(fist_items)
+		
 	for i in range(turn_list.size()):
 		var tex = TextureRect.new()
 		tex.texture = TurnName[turn_list[i]].texture
@@ -116,10 +119,11 @@ func stop_spin():
 		stop_tween.set_ease(Tween.EASE_OUT)
 		stop_tween.tween_property(reel,"position:y" , tareget_y,0.2)
 	
-	button_type = "trans"
+	stop_button.disabled = true
 	await stop_tween.finished
 	prize_number.emit(turn_list[prize_index])
 	stop_button.visible = false
+	button_type = "trans"
 	
 
 func _on_change_button() -> void:

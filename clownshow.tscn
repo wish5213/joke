@@ -123,3 +123,4 @@ stretch_mode = 0
 metadata/_edit_use_anchors_ = true
 
 [connection signal="button_down" from="reset" to="." method="_reset_game"]
+[connection signal="button_down" from="setting" to="." method="_go_to_mina"]

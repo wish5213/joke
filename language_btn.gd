@@ -7,7 +7,7 @@ class_name language
 @onready var lan_vi : TextureRect = $vn
 
 
-var default_lan = 1
+var default_lan = 2
 
 func _ready() -> void:
 	item_selected.connect(language_btn)

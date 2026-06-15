@@ -1,6 +1,6 @@
 extends Control
 
-@export var step_scene: PackedScene = preload("res://slot.tscn")
+@export var step_scene: PackedScene = preload("res://clownslot.tscn")
 @onready var mine_container = $GridContainer.get_children()
 
 var mine_count: int = 1
@@ -28,18 +28,18 @@ func _star_game():
 	
 	#本局遊戲的清單建立
 	for i in range(mine_count):
-		sq_list.append(step.SpName.MINE)
+		sq_list.append(step.SqName.MINE)
 		
 	for i in range(joker_count):
-		sq_list.append(step.SpName.JOKER)
+		sq_list.append(step.SqName.JOKER)
 		
 	for i in range(max(0,mine_container.size() - mine_count - joker_count)):
-		sq_list.append(step.SpName.EMPTY)
+		sq_list.append(step.SqName.EMPTY)
 	
 	sq_list.shuffle()
 		
 	for i in range(mine_container.size()):
-		mine_container[i].sp_type = sq_list[i]
+		mine_container[i].sq_type = sq_list[i]
 		
 		
 
@@ -53,3 +53,8 @@ func clean_game():
 #重新一局
 func _reset_game() -> void:
 	_star_game()
+
+
+func _go_to_mina() -> void:
+	get_tree().change_scene_to_file("res://text game.tscn")
+	pass # Replace with function body.

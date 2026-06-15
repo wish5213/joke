@@ -27,9 +27,10 @@ func transtext(text_number : int):
 	use_change_lan_prize_number = text_number
 	
 	if text_number == 4:
-		text_number = randi_range(4,9)
+		text_number = randi_range(4,7)
 		title_la.text = tr(str(text_number)+"_title")
 		content_la.text = tr(str(text_number)+"_content")
+		use_change_lan_prize_number = text_number
 	else:
 		title_la.text = tr(str(text_number)+"_title")
 		content_la.text = tr(str(text_number)+"_content")
@@ -43,3 +44,8 @@ func tw_to_ano():
 		
 	TranslationServer.set_locale(lan_new)
 	transtext(use_change_lan_prize_number)
+
+
+func _go_back_menu() -> void:
+	get_tree().change_scene_to_file("res://text game.tscn")
+	pass # Replace with function body.
