@@ -1,15 +1,15 @@
 [gd_scene format=3 uid="uid://cgltfxa7fv4t"]
 
-[ext_resource type="Script" uid="uid://dg64v487l53cc" path="res://text.gd" id="1_4srry"]
+[ext_resource type="Script" uid="uid://dg64v487l53cc" path="res://slot_text.gd" id="1_4srry"]
 [ext_resource type="Texture2D" uid="uid://xogn8ky3tfoc" path="res://Image/slot/explain.png" id="1_5wfp6"]
 [ext_resource type="Texture2D" uid="uid://symhg1xiwx17" path="res://Image/slot/all.png" id="1_7rri7"]
-[ext_resource type="Script" uid="uid://go4o15d66tfc" path="res://turntable.gd" id="1_ltvq2"]
+[ext_resource type="Script" uid="uid://go4o15d66tfc" path="res://slot_turntable.gd" id="1_ltvq2"]
 [ext_resource type="Texture2D" uid="uid://45ahntfdo30e" path="res://Image/slot/frame.png" id="1_uw6ar"]
 [ext_resource type="Texture2D" uid="uid://bxr8aju544cti" path="res://Image/slot/angel.png" id="2_ltvq2"]
 [ext_resource type="Texture2D" uid="uid://cadug0tr4q288" path="res://Image/slot/translate.png" id="2_uw6ar"]
 [ext_resource type="Texture2D" uid="uid://cr8vaiy8w4oln" path="res://Image/slot/myself.png" id="3_5wfp6"]
 [ext_resource type="Texture2D" uid="uid://baufc51mlwco5" path="res://Image/slot/translate_put.png" id="3_baieg"]
-[ext_resource type="Script" uid="uid://cyf5bitdc32kp" path="res://language_btn.gd" id="3_k2k70"]
+[ext_resource type="Script" uid="uid://cyf5bitdc32kp" path="res://slot_language_btn.gd" id="3_k2k70"]
 [ext_resource type="Texture2D" uid="uid://cv6pe14v80hoy" path="res://Image/slot/youdrink.png" id="4_4srry"]
 [ext_resource type="Texture2D" uid="uid://cdyhug4kh0pkl" path="res://Image/language/tw.png" id="4_isr6q"]
 [ext_resource type="Texture2D" uid="uid://ct0o303ow7yxl" path="res://Image/slot/stop.png" id="4_sgpot"]
@@ -18,6 +18,9 @@
 [ext_resource type="Texture2D" uid="uid://dgb6th1lpm5l0" path="res://Image/language/th.png" id="5_isr6q"]
 [ext_resource type="Texture2D" uid="uid://cncckmhnlq1i5" path="res://Image/language/en.png" id="5_wo7b1"]
 [ext_resource type="Texture2D" uid="uid://d2qhjqodvwf7l" path="res://Image/language/vn.png" id="6_swnr6"]
+
+[sub_resource type="Theme" id="Theme_isr6q"]
+PopupMenu/font_sizes/font_size = 35
 
 [node name="slot" type="Control" unique_id=1819201416]
 layout_mode = 3
@@ -28,7 +31,7 @@ offset_bottom = -0.8000488
 metadata/_edit_use_anchors_ = true
 
 [node name="text" type="Control" parent="." unique_id=669551143]
-anchors_preset = 0
+layout_mode = 1
 anchor_top = 0.48026314
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -71,35 +74,62 @@ metadata/_edit_use_anchors_ = true
 
 [node name="language_btn" type="OptionButton" parent="text" unique_id=724129639]
 layout_mode = 0
-offset_left = 808.0
-offset_top = 152.0
-offset_right = 920.0
-offset_bottom = 200.0
+offset_left = 832.0
+offset_top = 136.0
+offset_right = 1018.6667
+offset_bottom = 216.0
+theme = SubResource("Theme_isr6q")
+flat = true
+fit_to_longest_item = false
+item_count = 3
+popup/item_0/text = "TH"
+popup/item_0/id = 0
+popup/item_1/text = "VN"
+popup/item_1/id = 1
+popup/item_2/text = "EN"
+popup/item_2/id = 2
 script = ExtResource("3_k2k70")
 
 [node name="tw" type="TextureRect" parent="text/language_btn" unique_id=666265058]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("4_isr6q")
+expand_mode = 1
 
 [node name="th" type="TextureRect" parent="text/language_btn" unique_id=1238865194]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("5_isr6q")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="vn" type="TextureRect" parent="text/language_btn" unique_id=740715784]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("6_swnr6")
+expand_mode = 1
 
 [node name="en" type="TextureRect" parent="text/language_btn" unique_id=220493043]
-layout_mode = 0
-offset_right = 114.0
-offset_bottom = 48.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("5_wo7b1")
+expand_mode = 1
 
 [node name="turntable" type="Control" parent="." unique_id=1992540923]
 layout_mode = 1

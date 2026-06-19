@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c5qgqwy5gyxy4" path="res://clownslot.gd" id="1_vku4s"]
 [ext_resource type="PackedScene" uid="uid://cgltfxa7fv4t" path="res://slot.tscn" id="2_v3t0b"]
+[ext_resource type="Texture2D" uid="uid://61jntrw5y0b4" path="res://Image/slot/close.png" id="3_v3t0b"]
 
 [node name="clownslot" type="Control" unique_id=1184853509]
 layout_mode = 3
@@ -11,6 +12,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_vku4s")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1266369499]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0074074
+anchor_bottom = 1.0017095
+offset_bottom = -0.00024414063
+color = Color(0, 0, 0, 0.39215687)
+metadata/_edit_use_anchors_ = true
 
 [node name="back" parent="." unique_id=1819201416 instance=ExtResource("2_v3t0b")]
 layout_mode = 1
@@ -28,3 +38,28 @@ anchor_top = 0.47863248
 anchor_right = 0.9854074
 anchor_bottom = 0.9986325
 metadata/_edit_lock_ = true
+
+[node name="Button" type="Button" parent="." unique_id=1316347590]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.8
+anchor_top = 0.46752137
+anchor_right = 0.9464898
+anchor_bottom = 0.52991456
+offset_bottom = -0.00012207031
+flat = true
+metadata/_edit_group_ = true
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="Button" unique_id=424193200]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_v3t0b")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[connection signal="button_down" from="Button" to="." method="_on_close_clownslot"]

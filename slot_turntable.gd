@@ -54,6 +54,7 @@ func _ready() -> void:
 #func _on_text_signal(get_singal):
 	#print ("獎項是" ,get_singal)
 
+#負責產生轉盤順序及圖案的
 func _reel_photo(brain_turn_list : Array) -> void:
 	#for i in turn_main_rand :
 		#var fist_items = turn_list.pop_front()
@@ -124,6 +125,7 @@ func stop_spin(sync_anim : int):
 		stop_tween.set_ease(Tween.EASE_OUT)
 		stop_tween.tween_property(reel,"position:y" , tareget_y,0.2)
 	
+	#將停止鍵停止功能後把結果廣播出去
 	stop_button.disabled = true
 	await stop_tween.finished
 	prize_number.emit(turn_list[prize_index])
@@ -131,6 +133,7 @@ func stop_spin(sync_anim : int):
 	button_type = "trans"
 	
 
+#雙按鈕共用，停止後轉換成翻譯按鈕
 func _on_change_button() -> void:
 	match button_type:
 		"stop" : 

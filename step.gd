@@ -65,6 +65,8 @@ func _on_pressed() -> void:
 				2:
 					#SpName.JOKER
 					sq_joker.visible = true
+					#await get_tree().create_timer(0.3).timeout
+					get_tree().change_scene_to_file("res://clownslot.tscn")
 	)
 	#動畫特效，回彈的部分
 	tween.tween_property(self ,"scale",Vector2.ONE,0.12).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
