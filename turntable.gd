@@ -20,10 +20,12 @@ extends Control
 
 #定義各項函數
 var photo_high:float = 290
-var turn_list:Array = [0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,
-0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,
-2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,
-0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4]
+#var turn_list:Array = [0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,
+#0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,
+#2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,
+#0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4,0,1,2,3,4]
+var turn_list:Array = []
+
 var turn_main_rand : int = 0
 var is_reeling : bool = false
 var reel_tween : Tween
@@ -32,6 +34,7 @@ var button_type : String = "stop"
 var aaa = "zh_TW"
 
 signal prize_number
+signal roulette_stopped(sync_anim: int)
 #signal lan_new
 
 @onready var TurnName:Dictionary ={
@@ -44,17 +47,18 @@ signal prize_number
 	
 func _ready() -> void:
 	pass
-	_reel_photo()
-	start_spin()
+	#_reel_photo()
+	#start_spin()
 	#self.prize_number.connect(_on_text_signal)
 	
 #func _on_text_signal(get_singal):
 	#print ("獎項是" ,get_singal)
 
-func _reel_photo():
+func _reel_photo(brain_turn_list : Array) -> void:
 	#for i in turn_main_rand :
 		#var fist_items = turn_list.pop_front()
 		#turn_list.append(fist_items)
+	turn_list = brain_turn_list.duplicate()
 		
 	for i in range(turn_list.size()):
 		var tex = TextureRect.new()
@@ -79,11 +83,12 @@ func start_spin():
 	#倒數10秒後自動停止
 	await get_tree().create_timer(10.0).timeout
 	if is_reeling == true:
-		stop_spin()
+		var dice_roll = randi_range(1,4)
+		roulette_stopped.emit(dice_roll)
 
 
 #輪盤停止規則
-func stop_spin():
+func stop_spin(sync_anim : int):
 	is_reeling = false
 	if reel_tween and reel_tween.is_valid():
 		reel_tween.kill()
@@ -94,7 +99,7 @@ func stop_spin():
 	var stop_tween = create_tween()
 	
 	#輪盤動畫要演出哪個的隨機值
-	var rand_animation = randi_range(1,4)
+	var rand_animation = sync_anim
 	var slide_distance = 1
 	if rand_animation == 1:
 		slide_distance = 1
@@ -129,7 +134,8 @@ func stop_spin():
 func _on_change_button() -> void:
 	match button_type:
 		"stop" : 
-			stop_spin()
+			var dice_roll = randi_range(1,4)
+			roulette_stopped.emit(dice_roll)
 		
 		"trans":
 			lan_trans.tw_to_ano()
