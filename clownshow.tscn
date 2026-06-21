@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c51rxw4mqmjc"]
 
 [ext_resource type="Script" uid="uid://b2835st2hat6h" path="res://clownshow.gd" id="1_856k3"]
-[ext_resource type="Texture2D" uid="uid://j7xv5yu6ru3f" path="res://Image/game main/ChatGPT Image 2026年6月8日 下午09_00_57.png" id="2_5fid4"]
+[ext_resource type="Texture2D" uid="uid://cf2fxfnbwsin5" path="res://Image/game main/background2.png" id="2_vtoc2"]
 [ext_resource type="PackedScene" uid="uid://cqe3b2c62qt50" path="res://step.tscn" id="3_g5cit"]
 [ext_resource type="Texture2D" uid="uid://dj40ms7f78w8x" path="res://Image/game main/reset.png" id="4_7gqty"]
 [ext_resource type="Texture2D" uid="uid://dmy5iguecfjby" path="res://Image/game main/reset_put.png" id="5_3a8u1"]
@@ -29,7 +29,7 @@ anchor_bottom = 1.0
 offset_left = 6.1035156e-05
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_5fid4")
+texture = ExtResource("2_vtoc2")
 expand_mode = 3
 metadata/_edit_use_anchors_ = true
 

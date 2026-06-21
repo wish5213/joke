@@ -14,6 +14,10 @@ config/name="Joke"
 run/main_scene="uid://c51rxw4mqmjc"
 config/features=PackedStringArray("4.6", "Mobile")
 
+[autoload]
+
+settings="*uid://d0d4ec22of6u4"
+
 [display]
 
 window/size/viewport_width=1080

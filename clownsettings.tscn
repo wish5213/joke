@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://dl3rxn671byib"]
+
+[node name="clownsettings" type="Control" unique_id=611063296]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=882285818]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="now" type="Button" parent="VBoxContainer" unique_id=1878987391]
+layout_mode = 2
+
+[node name="th" type="TextureButton" parent="VBoxContainer/now" unique_id=338484214]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="vn" type="TextureButton" parent="VBoxContainer/now" unique_id=2134604514]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="en" type="TextureButton" parent="VBoxContainer/now" unique_id=376814241]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="set_langua" type="VBoxContainer" parent="VBoxContainer" unique_id=800728641]
+layout_mode = 2
+
+[node name="th" type="Button" parent="VBoxContainer/set_langua" unique_id=1099653699]
+layout_mode = 2
+
+[node name="vn" type="Button" parent="VBoxContainer/set_langua" unique_id=1282654531]
+layout_mode = 2
+
+[node name="en" type="Button" parent="VBoxContainer/set_langua" unique_id=2033603260]
+layout_mode = 2
+
+[node name="background" type="TextureRect" parent="." unique_id=897829935]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

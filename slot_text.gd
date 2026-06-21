@@ -22,6 +22,8 @@ func _ready() -> void:
 	#turntable_slot.prize_number.connect(transtext)
 	title_la.visible = false
 	content_la.visible = false
+	lan_new = settings.set_lan_new
+	TranslationServer.set_locale(lan_new)
 
 #畫面中產生文字的地方
 func transtext(text_number : int):
@@ -45,12 +47,17 @@ func transtext(text_number : int):
 #翻譯按鈕作用的地方
 func tw_to_ano():
 	if lan_new == "zh_TW":
-		lan_new = lan_type[lan_trans.default_lan]
+		lan_new = lan_type[settings.set_default_lan]
+		
 	else:
 		lan_new = "zh_TW"
 		
 	TranslationServer.set_locale(lan_new)
 	transtext(use_change_lan_prize_number)
+	
+	settings.set_lan_new = lan_new
+	settings.save_settings()
+
 
 
 func _go_back_menu() -> void:

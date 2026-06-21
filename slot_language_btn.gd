@@ -14,6 +14,7 @@ var default_lan = 0
 
 func _ready() -> void:
 	lan_select.visible = false
+	default_lan = settings.set_default_lan
 	#self.lan_new.connect(_my_get)
 	hide_lan()
 	language_btn(default_lan)
@@ -38,9 +39,9 @@ func hide_lan():
 func _on_main_button_down() -> void:
 	lan_select.visible = !lan_select.visible
 	
-#用來看Option裡面的羨慕是哪個，接到值以後顯示
+#用來看Option裡面的現在是哪個，接到值以後顯示
 func language_btn(index : int):
-	default_lan = index
+	#default_lan = index
 	match index:
 		0:
 			hide_lan()
@@ -54,3 +55,6 @@ func language_btn(index : int):
 			hide_lan()
 			lan_en.visible = true
 			lan_select.visible = false
+	
+	settings.set_default_lan = index
+	settings.save_settings()

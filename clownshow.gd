@@ -13,6 +13,12 @@ var joker_max: int = 3
 var joker_probability = 4
 
 func _ready() -> void:
+	mine_count = settings.set_mine_count
+	joker_count = settings.set_joker_count
+	joker_rand_flag = settings.set_joker_rand_flag
+	joker_min = settings.set_joker_min
+	joker_max = settings.set_joker_max
+	joker_probability = settings.set_joker_probability
 	_star_game()
 
 func _star_game():

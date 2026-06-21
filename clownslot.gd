@@ -21,6 +21,7 @@ var brain_turn_list : Array = [
 var secret_array : Array = [4,5,6,7,8,9]
 
 func _ready() -> void:
+	secret_array = settings.set_secret_array
 	_play_animation()
 	
 	_create_shared_date()
