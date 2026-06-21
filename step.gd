@@ -13,6 +13,8 @@ enum SqName{
 @onready var sq_mine: TextureRect = $mine
 @onready var sq_joker: TextureRect = $joker
 
+var slot_scene = preload("res://clownslot.tscn")
+
 #var type: StepType = StepType.EMPTY
 var ud_squera: bool = false
 var sq_type = 0 
@@ -66,7 +68,8 @@ func _on_pressed() -> void:
 					#SpName.JOKER
 					sq_joker.visible = true
 					#await get_tree().create_timer(0.3).timeout
-					get_tree().change_scene_to_file("res://clownslot.tscn")
+					var new_slot = slot_scene.instantiate()
+					get_tree().current_scene.add_child(new_slot)
 	)
 	#動畫特效，回彈的部分
 	tween.tween_property(self ,"scale",Vector2.ONE,0.12).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)

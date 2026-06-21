@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Joke"
-run/main_scene="uid://dh3s8rjxn83i4"
+run/main_scene="uid://c51rxw4mqmjc"
 config/features=PackedStringArray("4.6", "Mobile")
 
 [display]

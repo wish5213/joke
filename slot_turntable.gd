@@ -47,6 +47,7 @@ signal roulette_stopped(sync_anim: int)
 	
 func _ready() -> void:
 	pass
+	#_reel_photo(turn_list)
 	#_reel_photo()
 	#start_spin()
 	#self.prize_number.connect(_on_text_signal)

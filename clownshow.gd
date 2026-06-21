@@ -4,10 +4,10 @@ extends Control
 @onready var mine_container = $GridContainer.get_children()
 
 var mine_count: int = 1
-var joker_count: int = 2
-var joker_default: int = 2
+var joker_count: int = 5
+#var joker_default: int = 2
 var sq_list: Array = []
-var joker_rand_flag: bool = true
+var joker_rand_flag: bool = false
 var joker_min: int = 1 
 var joker_max: int = 3
 var joker_probability = 4
@@ -46,7 +46,7 @@ func _star_game():
 #清理資料
 func clean_game():
 	sq_list.clear()
-	joker_count = joker_default
+	#joker_count = joker_default
 	for child in mine_container:
 		child.again()
 

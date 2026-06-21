@@ -51,91 +51,87 @@ expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="title" type="Label" parent="text" unique_id=1611562437]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
 anchor_left = 0.07575758
-anchor_top = 0.34177214
-anchor_right = 0.71117425
-anchor_bottom = 0.4556962
+anchor_top = 0.3291139
+anchor_right = 0.92992425
+anchor_bottom = 0.48101267
 offset_top = 1.5258789e-05
-theme_override_font_sizes/font_size = 52
-text = "天使降臨"
+theme_override_font_sizes/font_size = 70
+text = "Quái vật thiếu tình thương"
 metadata/_edit_use_anchors_ = true
 
 [node name="content" type="Label" parent="text" unique_id=1875427923]
-layout_mode = 0
+layout_mode = 1
+anchors_preset = -1
 anchor_left = 0.121212125
-anchor_top = 0.49367088
+anchor_top = 0.5063292
 anchor_right = 0.90909094
-anchor_bottom = 0.7927215
-theme_override_font_sizes/font_size = 32
-text = "給你逃過一劫，Pass一次"
+anchor_bottom = 0.88765824
+theme_override_font_sizes/font_size = 42
+text = "Kể một câu chuyện xấu hổ. Nếu không ai đồng cảm thì nghĩa là chưa đủ \"thảm họa\" — bạn tự uống một ly. Nếu có người đồng cảm, cả hai cùng uống."
 autowrap_mode = 3
 metadata/_edit_use_anchors_ = true
 
-[node name="language_btn" type="OptionButton" parent="text" unique_id=724129639]
+[node name="language_btn" type="VBoxContainer" parent="text" unique_id=1209517416]
 layout_mode = 0
 offset_left = 832.0
 offset_top = 136.0
 offset_right = 1018.6667
 offset_bottom = 216.0
 theme = SubResource("Theme_isr6q")
-flat = true
-fit_to_longest_item = false
-item_count = 3
-popup/item_0/text = "TH"
-popup/item_0/id = 0
-popup/item_1/text = "VN"
-popup/item_1/id = 1
-popup/item_2/text = "EN"
-popup/item_2/id = 2
+theme_override_constants/separation = 53
 script = ExtResource("3_k2k70")
 
-[node name="tw" type="TextureRect" parent="text/language_btn" unique_id=666265058]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("4_isr6q")
-expand_mode = 1
+[node name="now_lan_btn" type="Button" parent="text/language_btn" unique_id=5537049]
+layout_mode = 2
 
-[node name="th" type="TextureRect" parent="text/language_btn" unique_id=1238865194]
+[node name="tw" type="TextureRect" parent="text/language_btn/now_lan_btn" unique_id=666265058]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_right = 186.0
+offset_bottom = 60.0
+texture = ExtResource("4_isr6q")
+
+[node name="th" type="TextureRect" parent="text/language_btn/now_lan_btn" unique_id=1238865194]
+layout_mode = 1
+offset_right = 186.0
+offset_bottom = 60.0
 texture = ExtResource("5_isr6q")
-expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
-[node name="vn" type="TextureRect" parent="text/language_btn" unique_id=740715784]
+[node name="vn" type="TextureRect" parent="text/language_btn/now_lan_btn" unique_id=740715784]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_right = 186.0
+offset_bottom = 60.0
 texture = ExtResource("6_swnr6")
-expand_mode = 1
 
-[node name="en" type="TextureRect" parent="text/language_btn" unique_id=220493043]
+[node name="en" type="TextureRect" parent="text/language_btn/now_lan_btn" unique_id=220493043]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_right = 186.0
+offset_bottom = 60.0
 texture = ExtResource("5_wo7b1")
-expand_mode = 1
+
+[node name="lan_select" type="VBoxContainer" parent="text/language_btn" unique_id=1462351555]
+layout_mode = 2
+
+[node name="th_btn" type="Button" parent="text/language_btn/lan_select" unique_id=1952265933]
+layout_mode = 2
+text = "TH"
+
+[node name="vn_btn" type="Button" parent="text/language_btn/lan_select" unique_id=1449620797]
+layout_mode = 2
+text = "VN"
+
+[node name="en_btn" type="Button" parent="text/language_btn/lan_select" unique_id=192826124]
+layout_mode = 2
+text = "EN"
 
 [node name="turntable" type="Control" parent="." unique_id=1992540923]
 layout_mode = 1
-anchor_left = 0.15151516
+anchor_left = 0.13636364
 anchor_top = 0.17105263
-anchor_right = 0.15151516
+anchor_right = 0.13636364
 anchor_bottom = 0.17105263
 script = ExtResource("1_ltvq2")
 metadata/_edit_use_anchors_ = true
@@ -145,7 +141,7 @@ clip_contents = true
 anchors_preset = 0
 offset_right = 597.0
 offset_bottom = 290.0
-scale = Vector2(1.2, 1.2)
+scale = Vector2(1.25, 1.25)
 metadata/_edit_use_anchors_ = true
 
 [node name="reel" type="Control" parent="turntable/mask" unique_id=778487947]

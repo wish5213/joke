@@ -64,5 +64,4 @@ func _on_any_roulette_trigger_stop(shared_anim : int):
 
 
 func _on_close_clownslot() -> void:
-	get_tree().change_scene_to_file("res://text game.tscn")
-	pass # Replace with function body.
+	queue_free()
