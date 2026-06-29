@@ -1,49 +1,76 @@
-extends Node
+extends Control
 
-var save_path = "user://settings.cfg" 
-var config = ConfigFile.new()
+var config = {
+	"mine" : 5,
+	"joker_co" : 5,
+	"prob" : 60,
+	"min" : 1,
+	"max" : 3
+}
 
-var set_mine_count : int = 3
-var set_joker_count : int = 4
-var set_joker_rand_flag : bool = false
-var set_joker_min : int = 1
-var set_joker_max : int = 3
-var set_joker_probability : int  = 4
-var set_default_lan = 0
-var set_secret_array : Array = [4,5,6,7,8,9]
-var set_lan_new : String  = "zh_TW"
+const steps = {
+	"mine" : 1,
+	"joker_co" : 1,
+	"prob" : 5,
+	"min" : 1,
+	"max" : 1
+}
 
+@onready var labels ={
+	"mine" = $mine_count_num,
+	"joker_co" = $joker_count_num,
+	"prob" = $joker_probabilty_num,
+	"min" = $joker_min_num,
+	"max" =  $joker_max_num
+}
+
+var total = config["mine"] + config["joker_co"] + config["max"] 
 
 
 func _ready() -> void:
-	load_settings()
-
-
-func save_settings():
-	config.set_value("gameset","set_mine_count",set_mine_count)
-	config.set_value("jokerset","set_joker_count",set_joker_count)
-	config.set_value("jokerset","set_joker_rand_flag",set_joker_rand_flag)
-	config.set_value("jokerset","set_joker_min",set_joker_min)
-	config.set_value("jokerset","set_joker_max",set_joker_max)
-	config.set_value("jokerset","set_joker_probability",set_joker_probability)
-	config.set_value("gameset","set_default_lan",set_default_lan)
-	config.set_value("gameset","set_secret_array",set_secret_array)
-	config.set_value("gamset","set_lan_new",set_lan_new)
+	for btn in get_tree().get_nodes_in_group("arrow"):
+		btn.pressed.connect(_on_arrow_pressed.bind(btn))
 	
-	config.save(save_path)
+	$jokerrand.set_pressed_no_signal(settings.set_joker_rand_flag)
+	_on_jokerrand_toggled(settings.set_joker_rand_flag)
 
 
-func load_settings():
-	var err = config.load(save_path)
-	if err == OK:
-		set_mine_count = config.get_value("gameset","set_mine_count",3)
-		set_joker_count = config.get_value("jokerset","set_joker_count",4)
-		set_joker_rand_flag = config.get_value("jokerset","set_joker_rand_flag",false)
-		set_joker_min = config.get_value("jokerset","set_joker_min",1)
-		set_joker_max = config.get_value("jokerset","set_joker_max",3)
-		set_joker_probability = config.get_value("jokerset","set_joker_probability",4)
-		set_default_lan = config.get_value("gameset","set_default_lan",0)
-		set_secret_array = config.get_value("gameset","set_secret_array",[4,5,6,7,8,9])
-			
-	else:
-		pass
+func _on_arrow_pressed(btn: Button) -> void:
+	var type = btn.get_meta("type")
+	var dir = btn.get_meta("dir")
+	
+	config[type] += dir * steps[type]
+	
+	_update_ui_state()
+
+func _update_ui_state() :
+	pass
+
+
+func _on_jokerrand_toggled(toggled_on: bool) -> void:
+	$joker_count_left.disabled = toggled_on
+	$joker_count_right.disabled = toggled_on
+	
+	$joker_min_left.disabled = not toggled_on
+	$joker_min_right.disabled = not toggled_on
+	$joker_probabilty_left.disabled = not toggled_on
+	$joker_probabilty_right.disabled = not toggled_on
+	$joker_max_left.disabled = not toggled_on
+	$joker_max_right.disabled = not toggled_on
+	
+	if toggled_on == true:
+		config["joker_co"] = 0
+		config["prob"] = 60
+		config["min"] = 1
+		config["max"] = 3
+	else :
+		config["joker_co"] = 5
+		config["prob"] = 0
+		config["min"] = 0
+		config["max"] = 0
+		
+	_update_ui_state()
+
+
+func _on_cancel() -> void:
+	queue_free()

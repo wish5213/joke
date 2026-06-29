@@ -1,6 +1,7 @@
 extends Control
 
 @export var step_scene: PackedScene = preload("res://clownslot.tscn")
+@export var setting_scene = preload("res://clownsettings.tscn")
 @onready var mine_container = $GridContainer.get_children()
 
 var mine_count: int = 1
@@ -63,4 +64,7 @@ func _reset_game() -> void:
 
 func _go_to_mina() -> void:
 	get_tree().change_scene_to_file("res://text game.tscn")
-	pass # Replace with function body.
+
+func _go_setting() -> void:
+	var new_setting = setting_scene.instantiate()
+	get_tree().current_scene.add_child(new_setting)

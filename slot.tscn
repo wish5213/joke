@@ -117,14 +117,17 @@ layout_mode = 2
 
 [node name="th_btn" type="Button" parent="text/language_btn/lan_select" unique_id=1952265933]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 text = "TH"
 
 [node name="vn_btn" type="Button" parent="text/language_btn/lan_select" unique_id=1449620797]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 text = "VN"
 
 [node name="en_btn" type="Button" parent="text/language_btn/lan_select" unique_id=192826124]
 layout_mode = 2
+theme_override_font_sizes/font_size = 30
 text = "EN"
 
 [node name="turntable" type="Control" parent="." unique_id=1992540923]

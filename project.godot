@@ -22,6 +22,8 @@ settings="*uid://d0d4ec22of6u4"
 
 window/size/viewport_width=1080
 window/size/viewport_height=2340
+window/size/window_width_override=360
+window/size/window_height_override=780
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 window/handheld/orientation=1
