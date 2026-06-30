@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dl3rxn671byib"]
 
 [ext_resource type="Script" uid="uid://ddu0hf1no801k" path="res://clownsettings.gd" id="1_hhqut"]
-[ext_resource type="Texture2D" uid="uid://nx1ihwliosvd" path="res://Image/setting/background .png" id="1_ufoja"]
+[ext_resource type="Texture2D" uid="uid://c0eq88r3wvuou" path="res://Image/setting/background.png" id="2_hhqut"]
 [ext_resource type="Texture2D" uid="uid://d1vv1esk6punl" path="res://Image/setting/language_select.png" id="2_pu504"]
 [ext_resource type="FontFile" uid="uid://l8vqg7loi8e" path="res://Image/setting/AbhayaLibre-ExtraBold.ttf" id="3_2ic5c"]
 [ext_resource type="Texture2D" uid="uid://dp4xshplcaqaa" path="res://Image/setting/arrow_use.png" id="4_38qku"]
@@ -23,15 +23,198 @@ script = ExtResource("1_hhqut")
 layout_mode = 1
 offset_right = 1078.0
 offset_bottom = 2355.0
-texture = ExtResource("1_ufoja")
+texture = ExtResource("2_hhqut")
 metadata/_edit_lock_ = true
+
+[node name="mine_count_left" type="Button" parent="." unique_id=302901315 groups=["arrow"]]
+layout_mode = 0
+offset_left = 576.0
+offset_top = 523.0
+offset_right = 626.0
+offset_bottom = 582.0
+theme_override_icons/icon = ExtResource("4_38qku")
+flat = true
+metadata/type = "mine"
+metadata/dir = -1
+
+[node name="mine_count_num" type="Label" parent="." unique_id=497189025]
+layout_mode = 0
+offset_left = 712.0
+offset_top = 523.0
+offset_right = 760.0
+offset_bottom = 579.0
+theme_override_font_sizes/font_size = 40
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="mine_count_right" type="Button" parent="." unique_id=1467869281 groups=["arrow"]]
+layout_mode = 0
+offset_left = 880.0
+offset_top = 579.0
+offset_right = 930.0
+offset_bottom = 638.0
+rotation = 3.1415927
+theme_override_icons/icon = ExtResource("4_38qku")
+flat = true
+metadata/type = "mine"
+metadata/dir = 1
+
+[node name="joker_count_left" type="Button" parent="." unique_id=1394990005 groups=["arrow"]]
+layout_mode = 0
+offset_left = 576.0
+offset_top = 736.0
+offset_right = 626.0
+offset_bottom = 795.0
+theme_override_icons/icon = ExtResource("4_38qku")
+flat = true
+metadata/type = "joker_co"
+metadata/dir = -1
+
+[node name="joker_count_num" type="Label" parent="." unique_id=1785995884]
+layout_mode = 0
+offset_left = 712.0
+offset_top = 736.0
+offset_right = 760.0
+offset_bottom = 792.0
+theme_override_font_sizes/font_size = 40
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="joker_count_right" type="Button" parent="." unique_id=986137830 groups=["arrow"]]
+layout_mode = 0
+offset_left = 880.0
+offset_top = 792.0
+offset_right = 930.0
+offset_bottom = 851.0
+rotation = 3.1415927
+theme_override_icons/icon = ExtResource("4_38qku")
+flat = true
+metadata/type = "joker_co"
+metadata/dir = 1
+
+[node name="jokerrand" type="CheckButton" parent="." unique_id=1313540596]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.53333336
+anchor_top = 0.35897437
+anchor_right = 0.6296296
+anchor_bottom = 0.3846154
+theme_override_icons/checked = ExtResource("5_nw8hy")
+theme_override_icons/unchecked = ExtResource("4_m64up")
+autowrap_trim_flags = 0
+metadata/_edit_use_anchors_ = true
+metadata/_edit_group_ = true
+
+[node name="joker_probabilty_left" type="Button" parent="." unique_id=1217860285 groups=["arrow"]]
+layout_mode = 0
+offset_left = 576.0
+offset_top = 939.0
+offset_right = 626.0
+offset_bottom = 998.0
+theme_override_icons/icon = ExtResource("4_38qku")
+flat = true
+metadata/type = "prob"
+metadata/dir = -1
+
+[node name="joker_probabilty_num" type="Label" parent="." unique_id=940548190]
+layout_mode = 0
+offset_left = 712.0
+offset_top = 939.0
+offset_right = 760.0
+offset_bottom = 995.0
+theme_override_font_sizes/font_size = 40
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="joker_probabilty_right" type="Button" parent="." unique_id=307153560 groups=["arrow"]]
+layout_mode = 0
+offset_left = 880.0
+offset_top = 995.0
+offset_right = 930.0
+offset_bottom = 1054.0
+rotation = 3.1415927
+theme_override_icons/icon = ExtResource("4_38qku")
+flat = true
+metadata/type = "prob"
+metadata/dir = 1
+
+[node name="joker_min_left" type="Button" parent="." unique_id=594686104 groups=["arrow"]]
+layout_mode = 0
+offset_left = 576.0
+offset_top = 1043.0
+offset_right = 626.0
+offset_bottom = 1102.0
+theme_override_icons/icon = ExtResource("4_38qku")
+flat = true
+metadata/type = "min"
+metadata/dir = -1
+
+[node name="joker_min_num" type="Label" parent="." unique_id=367730185]
+layout_mode = 0
+offset_left = 712.0
+offset_top = 1043.0
+offset_right = 760.0
+offset_bottom = 1099.0
+theme_override_font_sizes/font_size = 40
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="joker_min_right" type="Button" parent="." unique_id=2119619324 groups=["arrow"]]
+layout_mode = 0
+offset_left = 880.0
+offset_top = 1099.0
+offset_right = 930.0
+offset_bottom = 1158.0
+rotation = 3.1415927
+theme_override_icons/icon = ExtResource("4_38qku")
+flat = true
+metadata/type = "min"
+metadata/dir = 1
+
+[node name="joker_max_left" type="Button" parent="." unique_id=2095831086 groups=["arrow"]]
+layout_mode = 0
+offset_left = 576.0
+offset_top = 1147.0
+offset_right = 626.0
+offset_bottom = 1206.0
+theme_override_icons/icon = ExtResource("4_38qku")
+flat = true
+metadata/type = "max"
+metadata/dir = -1
+
+[node name="joker_max_num" type="Label" parent="." unique_id=2006590295]
+layout_mode = 0
+offset_left = 712.0
+offset_top = 1147.0
+offset_right = 760.0
+offset_bottom = 1203.0
+theme_override_font_sizes/font_size = 40
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="joker_max_right" type="Button" parent="." unique_id=1772330798 groups=["arrow"]]
+layout_mode = 0
+offset_left = 880.0
+offset_top = 1203.0
+offset_right = 930.0
+offset_bottom = 1262.0
+rotation = 3.1415927
+theme_override_icons/icon = ExtResource("4_38qku")
+flat = true
+metadata/type = "max"
+metadata/dir = 1
 
 [node name="default_lan" type="VBoxContainer" parent="." unique_id=882285818]
 layout_mode = 0
-offset_left = 576.0
-offset_top = 392.0
-offset_right = 867.0
-offset_bottom = 558.0
+offset_left = 584.0
+offset_top = 344.0
+offset_right = 875.0
+offset_bottom = 510.0
 metadata/_edit_group_ = true
 
 [node name="now" type="Button" parent="default_lan" unique_id=1878987391]
@@ -57,8 +240,8 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="set_langua" type="VBoxContainer" parent="default_lan" unique_id=800728641]
-visible = false
 layout_mode = 2
+mouse_filter = 2
 
 [node name="th" type="Button" parent="default_lan/set_langua" unique_id=1099653699]
 layout_mode = 2
@@ -77,189 +260,6 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("3_2ic5c")
 theme_override_font_sizes/font_size = 20
 text = "ENGLISH"
-
-[node name="mine_count_left" type="Button" parent="." unique_id=302901315 groups=["arrow"]]
-layout_mode = 0
-offset_left = 576.0
-offset_top = 523.0
-offset_right = 626.0
-offset_bottom = 582.0
-theme_override_icons/icon = ExtResource("4_38qku")
-flat = true
-metadata/type = "mine_cou_le"
-metadata/dir = 1
-
-[node name="mine_count_num" type="Label" parent="." unique_id=497189025]
-layout_mode = 0
-offset_left = 712.0
-offset_top = 523.0
-offset_right = 760.0
-offset_bottom = 579.0
-theme_override_font_sizes/font_size = 40
-text = "3"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="mine_count_right" type="Button" parent="." unique_id=1467869281 groups=["arrow"]]
-layout_mode = 0
-offset_left = 880.0
-offset_top = 579.0
-offset_right = 930.0
-offset_bottom = 638.0
-rotation = 3.1415927
-theme_override_icons/icon = ExtResource("4_38qku")
-flat = true
-metadata/type = "mine_cou_ri"
-metadata/dir = -1
-
-[node name="joker_count_left" type="Button" parent="." unique_id=1394990005 groups=["arrow"]]
-layout_mode = 0
-offset_left = 576.0
-offset_top = 736.0
-offset_right = 626.0
-offset_bottom = 795.0
-theme_override_icons/icon = ExtResource("4_38qku")
-flat = true
-metadata/type = "joker_cou_le"
-metadata/dir = 1
-
-[node name="joker_count_num" type="Label" parent="." unique_id=1785995884]
-layout_mode = 0
-offset_left = 712.0
-offset_top = 736.0
-offset_right = 760.0
-offset_bottom = 792.0
-theme_override_font_sizes/font_size = 40
-text = "3"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="joker_count_right" type="Button" parent="." unique_id=986137830 groups=["arrow"]]
-layout_mode = 0
-offset_left = 880.0
-offset_top = 792.0
-offset_right = 930.0
-offset_bottom = 851.0
-rotation = 3.1415927
-theme_override_icons/icon = ExtResource("4_38qku")
-flat = true
-metadata/type = "joker_cou_ri"
-metadata/dir = -1
-
-[node name="jokerrand" type="CheckButton" parent="." unique_id=1313540596]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.53333336
-anchor_top = 0.35897437
-anchor_right = 0.6296296
-anchor_bottom = 0.3846154
-theme_override_icons/checked = ExtResource("5_nw8hy")
-theme_override_icons/unchecked = ExtResource("4_m64up")
-autowrap_trim_flags = 0
-metadata/_edit_use_anchors_ = true
-metadata/_edit_group_ = true
-
-[node name="joker_probabilty_left" type="Button" parent="." unique_id=1217860285 groups=["arrow"]]
-layout_mode = 0
-offset_left = 576.0
-offset_top = 939.0
-offset_right = 626.0
-offset_bottom = 998.0
-theme_override_icons/icon = ExtResource("4_38qku")
-flat = true
-metadata/type = "joker_proba_le"
-metadata/dir = 1
-
-[node name="joker_probabilty_num" type="Label" parent="." unique_id=940548190]
-layout_mode = 0
-offset_left = 712.0
-offset_top = 939.0
-offset_right = 760.0
-offset_bottom = 995.0
-theme_override_font_sizes/font_size = 40
-text = "3"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="joker_probabilty_right" type="Button" parent="." unique_id=307153560 groups=["arrow"]]
-layout_mode = 0
-offset_left = 880.0
-offset_top = 995.0
-offset_right = 930.0
-offset_bottom = 1054.0
-rotation = 3.1415927
-theme_override_icons/icon = ExtResource("4_38qku")
-flat = true
-metadata/type = "joker_porba_ri"
-metadata/dir = -1
-
-[node name="joker_min_left" type="Button" parent="." unique_id=594686104 groups=["arrow"]]
-layout_mode = 0
-offset_left = 576.0
-offset_top = 1051.0
-offset_right = 626.0
-offset_bottom = 1110.0
-theme_override_icons/icon = ExtResource("4_38qku")
-flat = true
-metadata/type = "joker_min_le"
-metadata/dir = 1
-
-[node name="joker_min_num" type="Label" parent="." unique_id=367730185]
-layout_mode = 0
-offset_left = 712.0
-offset_top = 1051.0
-offset_right = 760.0
-offset_bottom = 1107.0
-theme_override_font_sizes/font_size = 40
-text = "3"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="joker_min_right" type="Button" parent="." unique_id=2119619324 groups=["arrow"]]
-layout_mode = 0
-offset_left = 880.0
-offset_top = 1107.0
-offset_right = 930.0
-offset_bottom = 1166.0
-rotation = 3.1415927
-theme_override_icons/icon = ExtResource("4_38qku")
-flat = true
-metadata/type = "joker_min_ri"
-metadata/dir = -1
-
-[node name="joker_max_left" type="Button" parent="." unique_id=2095831086 groups=["arrow"]]
-layout_mode = 0
-offset_left = 576.0
-offset_top = 1147.0
-offset_right = 626.0
-offset_bottom = 1206.0
-theme_override_icons/icon = ExtResource("4_38qku")
-flat = true
-metadata/type = "joker_max_le"
-metadata/dir = 1
-
-[node name="joker_max_num" type="Label" parent="." unique_id=2006590295]
-layout_mode = 0
-offset_left = 712.0
-offset_top = 1147.0
-offset_right = 760.0
-offset_bottom = 1203.0
-theme_override_font_sizes/font_size = 40
-text = "3"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="joker_max_right" type="Button" parent="." unique_id=1772330798 groups=["arrow"]]
-layout_mode = 0
-offset_left = 880.0
-offset_top = 1203.0
-offset_right = 930.0
-offset_bottom = 1262.0
-rotation = 3.1415927
-theme_override_icons/icon = ExtResource("4_38qku")
-flat = true
-metadata/type = "joker_max_ri"
-metadata/dir = -1
 
 [node name="king" type="CheckBox" parent="." unique_id=252930912]
 layout_mode = 1
