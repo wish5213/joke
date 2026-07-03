@@ -9,21 +9,21 @@ var set_joker_rand_flag : bool = true
 var set_joker_min : int = 1
 var set_joker_max : int = 3
 var set_joker_probability : int  = 70
-var set_default_lan = 0
-var set_secret_array : Array = [4,5,6,7,8,9]
+var set_default_lan = 3
+var set_secret_array : Array = [7,8,9]
 var set_lan_new : String  = "zh_TW"
+var set_music_current : bool = false
 
 
 
 func _ready() -> void:
-	set_mine_count = set_mine_count 
-	set_joker_count = set_joker_count
-	set_joker_rand_flag = set_joker_rand_flag
-	set_joker_min = set_joker_min
-	set_joker_max = set_joker_max
-	set_joker_probability = set_joker_probability
-	
-	save_settings()
+	#set_mine_count = set_mine_count 
+	#set_joker_count = set_joker_count
+	#set_joker_rand_flag = set_joker_rand_flag
+	#set_joker_min = set_joker_min
+	#set_joker_max = set_joker_max
+	#set_joker_probability = set_joker_probability
+	#save_settings()
 	
 	load_settings()
 
@@ -38,6 +38,7 @@ func save_settings():
 	config.set_value("gameset","set_default_lan",set_default_lan)
 	config.set_value("gameset","set_secret_array",set_secret_array)
 	config.set_value("gameset","set_lan_new",set_lan_new)
+	config.set_value("gameset","set_music_current",set_music_current)
 	
 	config.save(save_path)
 
@@ -54,6 +55,7 @@ func load_settings():
 		set_default_lan = config.get_value("gameset","set_default_lan",0)
 		set_secret_array = config.get_value("gameset","set_secret_array",[4,5,6,7,8,9])
 		set_lan_new = config.get_value("gameset","set_lan_new","zh_TW")
+		set_music_current = config.get_value("gameset","set_music_current",set_music_current)
 			
 	else:
 		pass

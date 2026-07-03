@@ -12,6 +12,7 @@ var joker_rand_flag: bool = false
 var joker_min: int = 1 
 var joker_max: int = 3
 var joker_probability = 4
+var change_music : bool = false
 
 func _ready() -> void:
 	mine_count = settings.set_mine_count
@@ -20,6 +21,9 @@ func _ready() -> void:
 	joker_min = settings.set_joker_min
 	joker_max = settings.set_joker_max
 	joker_probability = settings.set_joker_probability
+	$music.set_pressed_no_signal(settings.set_music_current)
+	_on_music_toggled(settings.set_music_current)
+	
 	_star_game()
 
 func _star_game():
@@ -62,9 +66,23 @@ func _reset_game() -> void:
 	_star_game()
 
 
-func _go_to_mina() -> void:
-	get_tree().change_scene_to_file("res://text game.tscn")
+#func _go_to_mina() -> void:
+	#get_tree().change_scene_to_file("res://text game.tscn")
 
+#前往設定頁面
 func _go_setting() -> void:
 	var new_setting = setting_scene.instantiate()
 	get_tree().current_scene.add_child(new_setting)
+	
+
+#管理音效是否撥放，以及上次音效的狀態更新
+func _on_music_toggled(toggled_on: bool) -> void:
+	change_music = toggled_on
+	if toggled_on == false: 
+		audiomanager.play_sfx("background")
+		
+	else:
+		audiomanager.stop_sfx("background")
+	
+	settings.set_music_current = change_music
+	settings.save_settings()

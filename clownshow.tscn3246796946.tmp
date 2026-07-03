@@ -7,20 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://dmy5iguecfjby" path="res://Image/game main/reset_put.png" id="5_3a8u1"]
 [ext_resource type="Texture2D" uid="uid://dtjlipyxb1q0g" path="res://Image/game main/setting.png" id="6_g3cau"]
 [ext_resource type="Texture2D" uid="uid://dk06s3t0fobrb" path="res://Image/game main/setting_put.png" id="7_1eav0"]
-[ext_resource type="Texture2D" uid="uid://b3ufy7ev2t7ve" path="res://Image/game main/music_op.png" id="8_jccmj"]
-[ext_resource type="Texture2D" uid="uid://lppuee8wnnsd" path="res://Image/game main/music_cl.png" id="9_sn873"]
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_kvbju"]
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_ep38m"]
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_gb1lk"]
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_yadcn"]
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_bp7wn"]
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_hqmaw"]
+[ext_resource type="AudioStream" uid="uid://cu6p4nfqw7os5" path="res://bgm/backgroundmusic.mp3" id="8_kvbju"]
+[ext_resource type="AudioStream" uid="uid://bb311aimhdaj" path="res://bgm/empty.mp3" id="8_sn873"]
+[ext_resource type="AudioStream" uid="uid://dfj2wwn8e1mno" path="res://bgm/bomb.wav" id="9_kvbju"]
 
 [node name="clownshow" type="Control" unique_id=1904922396]
 layout_mode = 3
@@ -136,25 +125,18 @@ ignore_texture_size = true
 stretch_mode = 0
 metadata/_edit_use_anchors_ = true
 
-[node name="music" type="CheckButton" parent="." unique_id=690340722]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.31851852
-anchor_top = 0.08073473
-anchor_right = 0.48796296
-anchor_bottom = 0.1554891
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_icons/checked = ExtResource("9_sn873")
-theme_override_icons/unchecked = ExtResource("8_jccmj")
-theme_override_icons/checked_disabled = SubResource("CanvasTexture_kvbju")
-theme_override_icons/unchecked_disabled = SubResource("CanvasTexture_ep38m")
-theme_override_icons/checked_mirrored = SubResource("CanvasTexture_gb1lk")
-theme_override_icons/unchecked_mirrored = SubResource("CanvasTexture_yadcn")
-theme_override_icons/checked_disabled_mirrored = SubResource("CanvasTexture_bp7wn")
-theme_override_icons/unchecked_disabled_mirrored = SubResource("CanvasTexture_hqmaw")
-metadata/_edit_use_anchors_ = true
+[node name="backbround" type="AudioStreamPlayer" parent="." unique_id=1846933597]
+stream = ExtResource("8_kvbju")
+volume_db = -10.0
+autoplay = true
+parameters/looping = true
+
+[node name="empty" type="AudioStreamPlayer" parent="." unique_id=148786143]
+stream = ExtResource("8_sn873")
+
+[node name="bomb" type="AudioStreamPlayer" parent="." unique_id=954663846]
+stream = ExtResource("9_kvbju")
+volume_db = -5.0
 
 [connection signal="button_down" from="reset" to="." method="_reset_game"]
 [connection signal="button_down" from="setting" to="." method="_go_setting"]
-[connection signal="toggled" from="music" to="." method="_on_music_toggled"]

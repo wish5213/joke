@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dhq3f1svmw5ql"]
+
+[ext_resource type="AudioStream" uid="uid://cu6p4nfqw7os5" path="res://bgm/backgroundmusic.mp3" id="1_jisk1"]
+[ext_resource type="Script" uid="uid://dew5lae7almxj" path="res://audio_manager.gd" id="1_l2k84"]
+[ext_resource type="AudioStream" uid="uid://bb311aimhdaj" path="res://bgm/empty.mp3" id="2_nhx87"]
+[ext_resource type="AudioStream" uid="uid://dfj2wwn8e1mno" path="res://bgm/bomb.wav" id="3_l2k84"]
+[ext_resource type="AudioStream" uid="uid://hd0q0x773qeq" path="res://bgm/reeling.mp3" id="4_l55mp"]
+[ext_resource type="AudioStream" uid="uid://o1j302kqfbby" path="res://bgm/prize.mp3" id="5_v0gdi"]
+
+[node name="AudioManager" type="AudioStreamPlayer" unique_id=1268115655]
+script = ExtResource("1_l2k84")
+
+[node name="background" type="AudioStreamPlayer" parent="." unique_id=278571759]
+stream = ExtResource("1_jisk1")
+parameters/looping = true
+
+[node name="empty" type="AudioStreamPlayer" parent="." unique_id=1400131363]
+stream = ExtResource("2_nhx87")
+volume_db = 5.0
+
+[node name="bomb" type="AudioStreamPlayer" parent="." unique_id=639837100]
+stream = ExtResource("3_l2k84")
+volume_db = 5.0
+
+[node name="reeling" type="AudioStreamPlayer" parent="." unique_id=1048210040]
+stream = ExtResource("4_l55mp")
+volume_db = -5.0
+parameters/looping = true
+
+[node name="prize" type="AudioStreamPlayer" parent="." unique_id=1112186683]
+stream = ExtResource("5_v0gdi")
+volume_db = -5.0

@@ -74,6 +74,7 @@ func _reel_photo(brain_turn_list : Array) -> void:
 
 #輪盤旋轉
 func start_spin():
+	audiomanager.play_sfx("reeling")
 	#判斷狀態是不是在選轉，如果是就跳出
 	if is_reeling == true:
 		return
@@ -129,10 +130,12 @@ func stop_spin(sync_anim : int):
 	#將停止鍵停止功能後把結果廣播出去
 	stop_button.disabled = true
 	await stop_tween.finished
+	audiomanager.stop_sfx("reeling")
+	audiomanager.play_sfx("prize")
 	prize_number.emit(turn_list[prize_index])
 	stop_button.visible = false
 	button_type = "trans"
-	
+		
 
 #雙按鈕共用，停止後轉換成翻譯按鈕
 func _on_change_button() -> void:

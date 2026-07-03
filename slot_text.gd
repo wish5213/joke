@@ -60,6 +60,5 @@ func tw_to_ano():
 
 
 
-func _go_back_menu() -> void:
-	get_tree().change_scene_to_file("res://text game.tscn")
-	pass # Replace with function body.
+#func _go_back_menu() -> void:
+	#get_tree().change_scene_to_file("res://text game.tscn")

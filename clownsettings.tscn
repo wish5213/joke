@@ -12,9 +12,10 @@
 
 [node name="clownsettings" type="Control" unique_id=611063296]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchor_right = 1.0070001
+anchor_bottom = 1.026
+offset_right = -7.5600586
+offset_bottom = -0.8400879
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_hhqut")
@@ -29,9 +30,9 @@ metadata/_edit_lock_ = true
 [node name="mine_count_left" type="Button" parent="." unique_id=302901315 groups=["arrow"]]
 layout_mode = 0
 offset_left = 576.0
-offset_top = 523.0
-offset_right = 626.0
-offset_bottom = 582.0
+offset_top = 664.0
+offset_right = 647.0
+offset_bottom = 749.0
 theme_override_icons/icon = ExtResource("4_38qku")
 flat = true
 metadata/type = "mine"
@@ -40,9 +41,9 @@ metadata/dir = -1
 [node name="mine_count_num" type="Label" parent="." unique_id=497189025]
 layout_mode = 0
 offset_left = 712.0
-offset_top = 523.0
+offset_top = 675.0
 offset_right = 760.0
-offset_bottom = 579.0
+offset_bottom = 731.0
 theme_override_font_sizes/font_size = 40
 text = "3"
 horizontal_alignment = 1
@@ -50,10 +51,10 @@ vertical_alignment = 1
 
 [node name="mine_count_right" type="Button" parent="." unique_id=1467869281 groups=["arrow"]]
 layout_mode = 0
-offset_left = 880.0
-offset_top = 579.0
-offset_right = 930.0
-offset_bottom = 638.0
+offset_left = 904.0
+offset_top = 745.0
+offset_right = 975.0
+offset_bottom = 830.0
 rotation = 3.1415927
 theme_override_icons/icon = ExtResource("4_38qku")
 flat = true
@@ -63,9 +64,9 @@ metadata/dir = 1
 [node name="joker_count_left" type="Button" parent="." unique_id=1394990005 groups=["arrow"]]
 layout_mode = 0
 offset_left = 576.0
-offset_top = 736.0
-offset_right = 626.0
-offset_bottom = 795.0
+offset_top = 904.0
+offset_right = 647.0
+offset_bottom = 989.0
 theme_override_icons/icon = ExtResource("4_38qku")
 flat = true
 metadata/type = "joker_co"
@@ -74,9 +75,9 @@ metadata/dir = -1
 [node name="joker_count_num" type="Label" parent="." unique_id=1785995884]
 layout_mode = 0
 offset_left = 712.0
-offset_top = 736.0
+offset_top = 916.0
 offset_right = 760.0
-offset_bottom = 792.0
+offset_bottom = 972.0
 theme_override_font_sizes/font_size = 40
 text = "3"
 horizontal_alignment = 1
@@ -84,10 +85,10 @@ vertical_alignment = 1
 
 [node name="joker_count_right" type="Button" parent="." unique_id=986137830 groups=["arrow"]]
 layout_mode = 0
-offset_left = 880.0
-offset_top = 792.0
-offset_right = 930.0
-offset_bottom = 851.0
+offset_left = 904.0
+offset_top = 982.0
+offset_right = 975.0
+offset_bottom = 1067.0
 rotation = 3.1415927
 theme_override_icons/icon = ExtResource("4_38qku")
 flat = true
@@ -96,23 +97,21 @@ metadata/dir = 1
 
 [node name="jokerrand" type="CheckButton" parent="." unique_id=1313540596]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.53333336
-anchor_top = 0.35897437
-anchor_right = 0.6296296
-anchor_bottom = 0.3846154
+offset_left = 576.0
+offset_top = 1016.0
+offset_right = 720.0
+offset_bottom = 1099.0
 theme_override_icons/checked = ExtResource("5_nw8hy")
 theme_override_icons/unchecked = ExtResource("4_m64up")
 autowrap_trim_flags = 0
-metadata/_edit_use_anchors_ = true
 metadata/_edit_group_ = true
 
 [node name="joker_probabilty_left" type="Button" parent="." unique_id=1217860285 groups=["arrow"]]
 layout_mode = 0
 offset_left = 576.0
-offset_top = 939.0
-offset_right = 626.0
-offset_bottom = 998.0
+offset_top = 1141.0
+offset_right = 647.0
+offset_bottom = 1226.0
 theme_override_icons/icon = ExtResource("4_38qku")
 flat = true
 metadata/type = "prob"
@@ -121,9 +120,9 @@ metadata/dir = -1
 [node name="joker_probabilty_num" type="Label" parent="." unique_id=940548190]
 layout_mode = 0
 offset_left = 712.0
-offset_top = 939.0
+offset_top = 1152.0
 offset_right = 760.0
-offset_bottom = 995.0
+offset_bottom = 1208.0
 theme_override_font_sizes/font_size = 40
 text = "3"
 horizontal_alignment = 1
@@ -131,10 +130,10 @@ vertical_alignment = 1
 
 [node name="joker_probabilty_right" type="Button" parent="." unique_id=307153560 groups=["arrow"]]
 layout_mode = 0
-offset_left = 880.0
-offset_top = 995.0
-offset_right = 930.0
-offset_bottom = 1054.0
+offset_left = 903.0
+offset_top = 1222.0
+offset_right = 974.0
+offset_bottom = 1307.0
 rotation = 3.1415927
 theme_override_icons/icon = ExtResource("4_38qku")
 flat = true
@@ -144,9 +143,9 @@ metadata/dir = 1
 [node name="joker_min_left" type="Button" parent="." unique_id=594686104 groups=["arrow"]]
 layout_mode = 0
 offset_left = 576.0
-offset_top = 1043.0
-offset_right = 626.0
-offset_bottom = 1102.0
+offset_top = 1261.0
+offset_right = 647.0
+offset_bottom = 1346.0
 theme_override_icons/icon = ExtResource("4_38qku")
 flat = true
 metadata/type = "min"
@@ -155,9 +154,9 @@ metadata/dir = -1
 [node name="joker_min_num" type="Label" parent="." unique_id=367730185]
 layout_mode = 0
 offset_left = 712.0
-offset_top = 1043.0
+offset_top = 1276.0
 offset_right = 760.0
-offset_bottom = 1099.0
+offset_bottom = 1332.0
 theme_override_font_sizes/font_size = 40
 text = "3"
 horizontal_alignment = 1
@@ -165,10 +164,10 @@ vertical_alignment = 1
 
 [node name="joker_min_right" type="Button" parent="." unique_id=2119619324 groups=["arrow"]]
 layout_mode = 0
-offset_left = 880.0
-offset_top = 1099.0
-offset_right = 930.0
-offset_bottom = 1158.0
+offset_left = 904.0
+offset_top = 1346.0
+offset_right = 975.0
+offset_bottom = 1431.0
 rotation = 3.1415927
 theme_override_icons/icon = ExtResource("4_38qku")
 flat = true
@@ -176,33 +175,33 @@ metadata/type = "min"
 metadata/dir = 1
 
 [node name="joker_max_left" type="Button" parent="." unique_id=2095831086 groups=["arrow"]]
-layout_mode = 0
+layout_mode = 1
 offset_left = 576.0
-offset_top = 1147.0
-offset_right = 626.0
-offset_bottom = 1206.0
+offset_top = 1381.0
+offset_right = 647.0
+offset_bottom = 1466.0
 theme_override_icons/icon = ExtResource("4_38qku")
 flat = true
 metadata/type = "max"
 metadata/dir = -1
 
 [node name="joker_max_num" type="Label" parent="." unique_id=2006590295]
-layout_mode = 0
-offset_left = 712.0
-offset_top = 1147.0
+layout_mode = 1
+offset_left = 720.0
+offset_top = 1392.0
 offset_right = 760.0
-offset_bottom = 1203.0
+offset_bottom = 1447.0
 theme_override_font_sizes/font_size = 40
 text = "3"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="joker_max_right" type="Button" parent="." unique_id=1772330798 groups=["arrow"]]
-layout_mode = 0
-offset_left = 880.0
-offset_top = 1203.0
-offset_right = 930.0
-offset_bottom = 1262.0
+layout_mode = 1
+offset_left = 904.0
+offset_top = 1460.0
+offset_right = 975.0
+offset_bottom = 1545.0
 rotation = 3.1415927
 theme_override_icons/icon = ExtResource("4_38qku")
 flat = true
@@ -212,9 +211,9 @@ metadata/dir = 1
 [node name="default_lan" type="VBoxContainer" parent="." unique_id=882285818]
 layout_mode = 0
 offset_left = 584.0
-offset_top = 344.0
+offset_top = 424.0
 offset_right = 875.0
-offset_bottom = 510.0
+offset_bottom = 590.0
 metadata/_edit_group_ = true
 
 [node name="now" type="Button" parent="default_lan" unique_id=1878987391]
@@ -224,9 +223,9 @@ icon = ExtResource("2_pu504")
 [node name="now_language" type="Label" parent="default_lan/now" unique_id=1251508204]
 layout_mode = 0
 offset_left = 8.0
-offset_top = 8.0
-offset_right = 280.0
-offset_bottom = 48.0
+offset_top = 11.0
+offset_right = 336.0
+offset_bottom = 70.0
 theme_override_colors/font_color = Color(0.99215686, 0.94509804, 0.72156864, 1)
 theme_override_colors/font_shadow_color = Color(0.6039216, 0.36078432, 0, 1)
 theme_override_colors/font_outline_color = Color(0.24313726, 0.1254902, 0, 1)
@@ -234,7 +233,7 @@ theme_override_constants/shadow_offset_x = 1
 theme_override_constants/shadow_offset_y = 1
 theme_override_constants/outline_size = 2
 theme_override_fonts/font = ExtResource("3_2ic5c")
-theme_override_font_sizes/font_size = 28
+theme_override_font_sizes/font_size = 50
 text = "ENGLISH"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -246,137 +245,103 @@ mouse_filter = 2
 [node name="th" type="Button" parent="default_lan/set_langua" unique_id=1099653699]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_2ic5c")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 32
 text = "THAILAND"
 
 [node name="vn" type="Button" parent="default_lan/set_langua" unique_id=1282654531]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_2ic5c")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 32
 text = "VIETNAM"
 
 [node name="en" type="Button" parent="default_lan/set_langua" unique_id=2033603260]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_2ic5c")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 32
 text = "ENGLISH"
 
-[node name="king" type="CheckBox" parent="." unique_id=252930912]
+[node name="king" type="CheckBox" parent="." unique_id=252930912 groups=["check"]]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.34100002
-anchor_top = 0.5777778
-anchor_right = 0.39629632
-anchor_bottom = 0.60200006
-offset_left = -0.27999878
-offset_right = -36.0
-offset_bottom = -32.680176
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(2.5, 2.5)
+offset_left = 448.00003
+offset_top = 1671.0
+offset_right = 472.00003
+offset_bottom = 1695.0
+scale = Vector2(3, 3)
 theme_override_colors/checkbox_checked_color = Color(0.9607843, 0.8784314, 0.50980395, 1)
 theme_override_colors/checkbox_unchecked_color = Color(18.892157, 18.892157, 18.892157, 1)
-metadata/_edit_use_anchors_ = true
+metadata/id = 4
 
-[node name="quest" type="CheckBox" parent="." unique_id=1251107418]
+[node name="quest" type="CheckBox" parent="." unique_id=1251107418 groups=["check"]]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.34074074
-anchor_top = 0.61880344
-anchor_right = 0.3962963
-anchor_bottom = 0.64444447
-offset_right = -36.0
-offset_bottom = -36.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(2.5, 2.5)
+offset_left = 448.00003
+offset_top = 1760.0001
+offset_right = 472.00003
+offset_bottom = 1784.0001
+scale = Vector2(3, 3)
 theme_override_colors/checkbox_checked_color = Color(0.9607843, 0.8784314, 0.50980395, 1)
 theme_override_colors/checkbox_unchecked_color = Color(18.892157, 18.892157, 18.892157, 1)
-metadata/_edit_use_anchors_ = true
+metadata/id = 6
 
-[node name="lostlove" type="CheckBox" parent="." unique_id=1618883774]
+[node name="lostlove" type="CheckBox" parent="." unique_id=1618883774 groups=["check"]]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.34074077
-anchor_top = 0.6598291
-anchor_right = 0.39629632
-anchor_bottom = 0.68547016
-offset_right = -36.0
-offset_bottom = -36.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(2.5, 2.5)
+offset_left = 448.0
+offset_top = 1856.0001
+offset_right = 472.0
+offset_bottom = 1880.0001
+scale = Vector2(3, 3)
 theme_override_colors/checkbox_checked_color = Color(0.9607843, 0.8784314, 0.50980395, 1)
 theme_override_colors/checkbox_unchecked_color = Color(18.892157, 18.892157, 18.892157, 1)
-metadata/_edit_use_anchors_ = true
+metadata/id = 8
 
-[node name="sick" type="CheckBox" parent="." unique_id=1796581602]
+[node name="sick" type="CheckBox" parent="." unique_id=1796581602 groups=["check"]]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.64444447
-anchor_top = 0.5777778
-anchor_right = 0.7
-anchor_bottom = 0.6034188
-offset_right = -36.0
-offset_bottom = -36.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(2.5, 2.5)
+offset_left = 880.0
+offset_top = 1671.0
+offset_right = 904.0
+offset_bottom = 1695.0
+scale = Vector2(3, 3)
 theme_override_colors/checkbox_checked_color = Color(0.9607843, 0.8784314, 0.50980395, 1)
 theme_override_colors/checkbox_unchecked_color = Color(18.892157, 18.892157, 18.892157, 1)
-metadata/_edit_use_anchors_ = true
+metadata/id = 5
 
-[node name="correct" type="CheckBox" parent="." unique_id=1902533303]
+[node name="correct" type="CheckBox" parent="." unique_id=1902533303 groups=["check"]]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.6444445
-anchor_top = 0.61880344
-anchor_right = 0.70000005
-anchor_bottom = 0.6444445
-offset_right = -36.0
-offset_bottom = -36.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(2.5, 2.5)
+offset_left = 880.00006
+offset_top = 1760.0
+offset_right = 904.00006
+offset_bottom = 1784.0
+scale = Vector2(3, 3)
 theme_override_colors/checkbox_checked_color = Color(0.9607843, 0.8784314, 0.50980395, 1)
 theme_override_colors/checkbox_unchecked_color = Color(18.892157, 18.892157, 18.892157, 1)
-metadata/_edit_use_anchors_ = true
+metadata/id = 7
 
-[node name="M" type="CheckBox" parent="." unique_id=1547751754]
+[node name="M" type="CheckBox" parent="." unique_id=1547751754 groups=["check"]]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.64444447
-anchor_top = 0.65982914
-anchor_right = 0.7
-anchor_bottom = 0.68547016
-offset_right = -36.0
-offset_bottom = -36.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(2.5, 2.5)
+offset_left = 880.0
+offset_top = 1856.0
+offset_right = 904.0
+offset_bottom = 1880.0
+scale = Vector2(3, 3)
 theme_override_colors/checkbox_checked_color = Color(0.9607843, 0.8784314, 0.50980395, 1)
 theme_override_colors/checkbox_unchecked_color = Color(18.892157, 18.892157, 18.892157, 1)
-metadata/_edit_use_anchors_ = true
+metadata/id = 9
 
 [node name="OK" type="Button" parent="." unique_id=912453205]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.5925926
-anchor_top = 0.84786326
-anchor_right = 0.80185187
-anchor_bottom = 0.87435895
+offset_left = 600.0
+offset_top = 2176.0
+offset_right = 959.0
+offset_bottom = 2271.0
 icon = ExtResource("5_2ic5c")
-metadata/_edit_use_anchors_ = true
 
 [node name="cancel" type="Button" parent="." unique_id=1486666876]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.23703703
-anchor_top = 0.84786326
-anchor_right = 0.4462963
-anchor_bottom = 0.87435895
+offset_left = 128.0
+offset_top = 2176.0
+offset_right = 487.0
+offset_bottom = 2271.0
 icon = ExtResource("6_38qku")
-metadata/_edit_use_anchors_ = true
 
 [connection signal="toggled" from="jokerrand" to="." method="_on_jokerrand_toggled"]
+[connection signal="button_down" from="OK" to="." method="_on_ok"]
 [connection signal="button_down" from="cancel" to="." method="_on_cancel"]

@@ -59,15 +59,18 @@ func _on_pressed() -> void:
 				0:
 					#SpName.EMPTY
 					sq_empty.visible = true
+					audiomanager.play_sfx("empty")
 		
 				1:
 					#SpName.MINE
 					sq_mine.visible = true
+					audiomanager.play_sfx("bomb")
 		
 				2:
 					#SpName.JOKER
 					sq_joker.visible = true
 					#await get_tree().create_timer(0.3).timeout
+					audiomanager.back_eff_sp()
 					var new_slot = slot_scene.instantiate()
 					get_tree().current_scene.add_child(new_slot)
 	)
