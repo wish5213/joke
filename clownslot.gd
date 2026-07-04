@@ -37,7 +37,7 @@ func _ready() -> void:
 #製作轉盤要用的reel然後傳到兩個slot裡面的函數_reel_photo裡面
 func _create_shared_date()  -> void:
 	brain_turn_list.clear()
-	
+
 	for i in range(70):
 		brain_turn_list.append(randi_range(0, 4))
 		brain_turn_list.append(i % 4)
@@ -69,4 +69,5 @@ func _on_any_roulette_trigger_stop(shared_anim : int):
 #將轉盤頁面關閉
 func _on_close_clownslot() -> void:
 	queue_free()
+	audiomanager.stop_sfx("reeling")
 	audiomanager.back_eff_sp()

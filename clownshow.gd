@@ -31,8 +31,8 @@ func _star_game():
 	
 	#小丑隨機邏輯
 	if joker_rand_flag == true:
-		var joker_rand_pro = randi_range(1,10)
-		if joker_rand_pro > joker_probability :
+		var joker_rand_pro = randi_range(1,100)
+		if joker_rand_pro < joker_probability == true:
 			joker_count = randi_range(joker_min,joker_max)
 		else :
 			joker_count = 0
